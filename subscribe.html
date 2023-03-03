@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Base. The arcade experience of your dreams. Coming soon to Belfast</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/98.css@0.1.4/build/98.css" />
 
 <script type="text/javascript">
 const bgArray = new Array();
@@ -20,7 +21,7 @@ bgArray[8] = "8";
 bgArray[8] = "9";
 bgArray[8] = "10";
 
-const url = "https://itsdavidhughes.com/base/";
+const url = "https://basearcade.com/";
 let i = 0;
 let l = bgArray.length;
 
@@ -124,22 +125,282 @@ html, body {
 	}
 
 
+
+
+/*************/
+/*   MODAL   */
+/*************/
+/* The Modal (background) */
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: hidden;
+	/* Enable scroll if needed */
+	background-color: #070707bd;
+	/* Black w/ opacity */
+	transition: all 0.5s ease 0.06s;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	/* 15% from the top and centered */
+	padding: 1.2rem;
+	max-width: 30%;
+	/* Could be more or less, depending on screen size */
+	visibility: hidden;
+	box-shadow: 2px 2px 10px 0px rgba(99, 106, 119, 0.6);
+	border-radius: 5px;
+}
+
+
+/* The Close Button */
+
+.close {
+	color: #dedede;
+	/*float: right;*/
+	font-size: 2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.close:before {
+	content: "Close";
+	font-size: 1rem;
+	display: none;
+	text-decoration: none;
+	align-self: center;
+	margin-top: 0.2rem;
+	font-weight: 400;
+}
+
+.close:hover:before {
+	display: initial;
+	color: #dedede;
+}
+
+.close:hover,
+.close:focus {
+	color: hsl(0, 100%, 70%);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.close:active,
+.close:before:active {
+	transition: all 60ms ease;
+	transform: scale(0.97);
+}
+
+
+/***********************/
+/*  modal form layout  */
+/***********************/
+
+.modal-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.modal-footer {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+.modal-footer > input {
+	margin-top: 0.8rem;
+	margin-bottom: 0rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+.modal-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-row {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 0.4rem 0.4rem;
+}
+
+.form-row:nth-child(odd) {
+	background: #f2f2f2;
+}
+
+.form-row label {
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 50%;
+}
+
+.form-row input,
+.form-row select {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 50%;
+	border: 1px solid hsl(0, 0%, 90%);
+	padding: 0.2rem 0.2rem;
+	max-width: 50%;
+}
+
+.slideDown {
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;
+	animation-duration: 0.6s;
+	-webkit-animation-duration: 0.6s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	visibility: visible !important;
+}
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(4%);
+	}
+	65%{
+		transform: translateY(-2%);
+	}
+	80%{
+		transform: translateY(2%);
+	}
+	95%{
+		transform: translateY(-1%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+
+input, label{
+	display:block;
+	width: 100%;
+}
+
 </style>
 
 </head>
 
 <body>
 <div class="bg"></div>
-<div class="fg"><p class="large"><img src="smol-logo.png"><span style="font-size: 12px; display: block; color: #f2f2f2; margin-top: 6em">Find out first about the launch</span>
-	<iframe
-	scrolling="no"
-	style="width:100%!important;height:220px;"
-	src="https://buttondown.email/basearcade?as_embed=true"
-	></iframe><br /><br /></p></div>
+<div class="fg">
+	
+	<p class="large">
+		<img src="smol-logo.png">
+
+		
+		
+	
+		<a href="#0" id="modal-button" style="display: block;" class="button good">Open modal</a>
+	
+	
+	</p>
 
 
 
 
+</div>
+
+
+<div id="myModal" class="modal">
+
+	
+
+	<!-- Modal content -->
+	
+	<div class="modal-content slideDown">
+
+		<div class="modal-header">
+			<span class="close" id="closeModal">&times;</span>
+		
+			<h2>launch party coming soon baby</h2>
+		</div>
+		<div class="modal-body">
+
+			
+			
+			<form
+			action="https://buttondown.email/api/emails/embed-subscribe/basearcade"
+			method="post"
+			target="popupwindow"
+			onsubmit="window.open('https://buttondown.email/basearcade', 'popupwindow')"
+			class="embeddable-buttondown-form"
+			>
+			<label for="bd-email">Enter your email</label>
+			<input type="email" name="email" id="bd-email" />
+			<input type="submit" value="Subscribe" />
+		
+			</form>
+		
+
+	</div>
+
+</div>
+
+
+
+
+<script>
+
+	// get the elements
+const modal = document.getElementById('myModal')
+const button = document.getElementById("modal-button")
+const close = document.querySelectorAll(".close")[0]
+const clickable = document.querySelectorAll('.clickable')
+
+const openModal = function() {
+	modal.style.display = "block"
+}
+const closeModal = function() {
+		modal.style.display = "none"
+	}
+	//event listeners
+button.addEventListener('click', openModal, false)
+close.addEventListener('click', closeModal, false)
+for (let i = 0; i < clickable.length; i++) {
+	clickable[i].addEventListener('click', openModal, false)
+}
+
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none"
+	}
+}
+
+</script>
 
 </body>
 </html>
