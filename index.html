@@ -135,7 +135,174 @@ img.logo{
 	.desktop{
 		display: none;
 	}
+
+	.modal-content{
+		max-width: 60%;
+	}
 }
+
+
+/*************/
+/*   MODAL   */
+/*************/
+/* The Modal (background) */
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: hidden;
+	/* Enable scroll if needed */
+
+	background-image: url(pixel-static.gif);
+
+	/* Black w/ opacity */
+	transition: all 0.5s ease 0.06s;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto 5% auto;
+	/* 15% from the top and centered */
+
+	max-width: 20%;
+	/* Could be more or less, depending on screen size */
+	visibility: hidden;
+	
+	padding: 1.6rem 3rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* The Close Button */
+
+.close {
+	color: #dedede;
+	/*float: right;*/
+	font-size: 2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.close:before {
+	content: "Close";
+	font-size: 1rem;
+	display: none;
+	text-decoration: none;
+	align-self: center;
+	margin-top: 0.2rem;
+	font-weight: 400;
+}
+
+.close:hover:before {
+	display: initial;
+	color: #dedede;
+}
+
+.close:hover,
+.close:focus {
+	color: hsl(0, 100%, 70%);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.close:active,
+.close:before:active {
+	transition: all 60ms ease;
+	transform: scale(0.97);
+}
+
+
+/***********************/
+/*  modal form layout  */
+/***********************/
+
+.modal-content {
+
+}
+
+.modal-header {
+
+	margin-bottom: 1rem;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.modal-footer {
+	
+}
+
+.modal-footer > input {
+	margin-top: 0.8rem;
+	margin-bottom: 0rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+.modal-form {
+	
+}
+
+
+.slideDown {
+
+	visibility: visible !important;
+}
+
+input{
+
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+input, label{
+	display:block;
+	width: 100%;
+}
+
+
+#closeModal{
+	text-align: center;
+	display: block;
+}
+
+
+.modal p{
+	position: static;
+	transform: none;
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+}
+
+
+.modal-header h2, .modal-header p{
+	font-family: "Pixelated MS Sans Serif", Arial !important;
+	line-height: 1.3;
+}
+@media screen and (max-width:600px) {
+
+	
+	
+}
+
 
 
 </style>
@@ -144,7 +311,50 @@ img.logo{
 
 <body>
 <div class="bg"></div>
-<div class="fg"><p class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span style="font-size: 12px; display: block; color: #f2f2f2; margin: 6em 0em; font-weight: bold;">A pop up retro arcade experience in Belfast </span><a class="button" href="subscribe.html">Find out when we launch</a></p></div>
+<div class="fg"><p class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span style="font-size: 12px; display: block; color: #f2f2f2; margin: 6em 0em; font-weight: bold;">A pop up retro arcade experience in Belfast </span><a href="#0" id="modal-button" style="display: block;" class="button good">Find out when we launch</a></p></div>
+
+
+<div id="myModal" class="modal">
+
+	
+
+	<!-- Modal content -->
+	
+	<div class="modal-content slideDown">
+
+		<div class="modal-header">
+			
+		
+			<h2>We're launching soon </h2>
+			<p>We're very excited</p>
+		</div>
+		<div class="modal-body">
+
+			
+			
+			<form
+			action="https://buttondown.email/api/emails/embed-subscribe/basearcade"
+			method="post"
+			target="popupwindow"
+			onsubmit="window.open('https://buttondown.email/basearcade', 'popupwindow')"
+			class="embeddable-buttondown-form"
+			>
+			<label for="bd-email">Enter your email</label>
+			<input type="email" name="email" id="bd-email" />
+			<input type="submit" value="Subscribe" />
+		
+			</form>
+		
+
+	</div>
+
+</div>
+<span class="close" id="closeModal">cancel</span>
+</div>
+
+
+
+
 
 
 <audio id="track">
@@ -204,5 +414,35 @@ img.logo{
 	
 	
 	</script>
+
+<script>
+
+	// get the elements
+const modal = document.getElementById('myModal')
+const button = document.getElementById("modal-button")
+const close = document.querySelectorAll(".close")[0]
+const clickable = document.querySelectorAll('.clickable')
+
+const openModal = function() {
+	modal.style.display = "block"
+}
+const closeModal = function() {
+		modal.style.display = "none"
+	}
+	//event listeners
+button.addEventListener('click', openModal, false)
+close.addEventListener('click', closeModal, false)
+for (let i = 0; i < clickable.length; i++) {
+	clickable[i].addEventListener('click', openModal, false)
+}
+
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none"
+	}
+}
+
+</script>
+
 </body>
 </html>
