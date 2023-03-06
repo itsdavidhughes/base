@@ -201,51 +201,6 @@ img.logo{
 
 
 
-/* The Close Button */
-
-.close {
-	color: #dedede;
-	/*float: right;*/
-	font-size: 2rem;
-	font-weight: bold;
-	display: flex;
-	align-items: center;
-}
-
-.close:before {
-	content: "Close";
-	font-size: 1rem;
-	display: none;
-	text-decoration: none;
-	align-self: center;
-	margin-top: 0.2rem;
-	font-weight: 400;
-}
-
-.close:hover:before {
-	display: initial;
-	color: #dedede;
-}
-
-.close:hover,
-.close:focus {
-	color: hsl(0, 100%, 70%);
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.close:active,
-.close:before:active {
-	transition: all 60ms ease;
-	transform: scale(0.97);
-}
-
-
-/***********************/
-/*  modal form layout  */
-/***********************/
-
-
 
 .modal-header {
 
@@ -285,7 +240,13 @@ input, label{
 
 #closeModal{
 	text-align: center;
-	display: block;
+	display: inline-block;
+	
+}
+
+#closeModal:hover{
+	cursor: pointer;
+	
 }
 
 
@@ -324,6 +285,43 @@ input, label{
 
 }
 
+.modal-header p{
+	padding:0;
+	text-align: center;
+	
+}
+
+.modal-header h2{
+	font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+.close{
+	font-family: "Pixelated MS Sans Serif", Arial;
+	font-size: 12px;
+	color: black;
+	text-decoration: underline;
+	background: white;
+	opacity: 0.8;
+	display: inline-block;
+	padding: 0.5em;
+	
+}
+
+.fieldstyle{
+	margin-bottom: 0.5em;
+}
+
+.submitstyle{
+	-webkit-appearance: none;
+	
+	
+}
+
+.submitstyle:hover{
+	cursor: pointer;
+}
+
+
 </style>
 
 </head>
@@ -344,8 +342,8 @@ input, label{
 		<div class="modal-header">
 			
 		
-			<h2>We're launching soon </h2>
-			<p>We're very excited</p>
+			
+			<p>We'll be sharing launch details in our newsletter.  </p>
 		</div>
 		<div class="modal-body">
 
@@ -358,9 +356,9 @@ input, label{
 			onsubmit="window.open('https://buttondown.email/basearcade', 'popupwindow')"
 			class="embeddable-buttondown-form"
 			>
-			<label for="bd-email">Enter your email</label>
-			<input type="email" name="email" id="bd-email" />
-			<input type="submit" value="Subscribe" />
+			<label for="bd-email">Stick your email in here</label>
+			<input type="email" required placeholder="e.g. john@aol.com" name="email" id="bd-email" class="fieldstyle" />
+			<input type="submit" value="Subscribe" class="submitstyle"/>
 		
 			</form>
 		
@@ -368,7 +366,7 @@ input, label{
 	</div>
 
 </div>
-<span class="close" id="closeModal">cancel</span>
+<span class="close" id="closeModal">Na i'm alright</span>
 </div>
 
 
