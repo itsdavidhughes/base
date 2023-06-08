@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<script src="https://js.tito.io/v2/with/inline" async></script>
+	<script src="https://js.tito.io/v2/with/inline,test_mode" async></script>
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JN1W14YVXT"></script>
 
@@ -13,8 +13,12 @@
   gtag('config', 'G-JN1W14YVXT');
 </script>
 <meta name="viewport" content="width=device-width" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Base. The arcade experience of your dreams. Coming soon to Belfast</title>
+<meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
+<meta property="og:description" content="1 & 2 July at Oh Yeah Music Centre" />
+<meta property="og:image" content="https://basearcade.com/og.png" />
+<meta property="og:url" content="https://basearcade.com" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>Base Arcade | A Pop Up Retro Arcade Experience in Belfast | Oh Yeah Music Centre Belfast </title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
@@ -56,16 +60,16 @@ it();
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
-  src: url("ms_sans_serif.woff") format("woff");
-  src: url("ms_sans_serif.woff2") format("woff2");
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif.woff") format("woff");
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
-  src: url("ms_sans_serif_bold.woff") format("woff");
-  src: url("ms_sans_serif_bold.woff2") format("woff2");
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif_bold.woff") format("woff");
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif_bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -104,7 +108,7 @@ ul.tree-view,
 	background-color: black;
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
+	height: 80vh;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -114,7 +118,7 @@ ul.tree-view,
 	background-color: rgba(0,0,0,0.6);
 	position: relative;
 	width: 100vw;
-	height: 100vh;
+	height: 80vh;
 }
 	div#header {
 		font-family: "Pixelated MS Sans Serif", Arial;
@@ -357,7 +361,7 @@ input, label{
 	cursor: pointer;
 }
 
-#tickets{
+#tickets, #arcade-info{
 	padding: 3rem;
 
 }
@@ -403,7 +407,38 @@ h4{
 	text-align: center;
 }
 
+#arcade-info{
+	text-align: center;
+	border-top: 1px solid #333;
+	
 
+}
+
+.content{
+	max-width: 920px;
+    margin: 0 auto;
+	padding: 3rem 0;
+
+}
+
+.next-event{
+	background: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	padding: 2em;
+	max-width: 920px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.event.aug h3 {
+	margin-bottom: 1em;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
 
 .tito-registration-progress{ display:none !important;}
 
@@ -415,23 +450,54 @@ h4{
 
 <body>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter">13 & 14 May</span></div></div>
+<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter">How it works</span><span class="newsletter">Contact</span></div></div>
 
 <div id="tickets">
 	<div class="event">
-		<h3>Saturday 13 May </h3>
+		<h3>Saturday 1 July </h3>
 		<h4>Choose a session</h4>
 		<tito-widget
-		event="basearcade/may-13"
+		event="basearcade/jul-1"
 		></tito-widget>
 	</div>	
 	<div class="event">
-		<h3>Sunday 14 May </h3>
+		<h3>Sunday 2 July </h3>
 		<h4>Choose a session</h4>
 		<tito-widget
-		event="basearcade/may-14"
+		event="basearcade/jul-2"
 		></tito-widget>
 	</div>	
+	<div class="event aug">
+		<h3>August 5 & 6 </h3>
+		<div class="next-event">On Sale Tue 13 June @ 8pm</div>
+		
+	</div>	
+</div>
+
+<div id="arcade-info">
+
+	<div class="content">
+
+		<iframe class="youtube-video"  src="https://www.youtube.com/embed/XWX3ra_Ufhk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+		<h3>Welcome to Base Arcade</h3>
+		<p>Get ready for some weekend sessions of retro arcade action with classic games from the 80s & 90s, pinball tables and a retro console corner. There'll be a full bar and our early session is family friendly.</p>
+
+		Why sessions?
+We're running sessions so we can ensure an enjoyable experience for everyone. We want to make sure you get plenty of game time on the machines of your choice. A form of crowd/quality control, basically.
+
+What does free play mean?
+Free play means that once you have a pass, all machines, pinball and consoles are free to play. No coins needed.
+
+Will there be a bar?
+Yes! There’s a fully stocked bar with a selection of craft beers, regular beers and more. And we’ve devised some Arcade themed cocktails too to give you the steady nerves needed to get past Donkey Kong level 2! Last orders 11pm.
+
+Kids allowed?
+The first session (12-4pm) will be family friendly. The later ones will be adult only. Bar still open for adults during the first session.
+
+Kids are 15 and under. They must be accompanied by an adult with a ticket.
+
+	</div>
 </div>
 
 <div id="myModal" class="modal">
