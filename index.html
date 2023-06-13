@@ -472,15 +472,36 @@ h4{
 	margin-bottom: 1em;
 }
 
+.sold-out{
+	opacity: 0.6;
+}
+
 </style>
 
 </head>
 
 <body>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter">1 & 2 July @ Oh yeah music centre</span></div></div>
+<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter">5 & 6 AUG  on Sale @ 8pm Tonight</span><span class="newsletter sold-out">1 & 2 July SOLD OUT</span></div></div>
 
 <div id="tickets">
+
+
+	<div class="event aug">
+		<h3>Sat 5 August</h3>
+		<h4>Choose a session</h4>
+		<tito-widget
+		event="basearcade/aug-5"
+		></tito-widget>
+	</div>	
+	<div class="event aug">
+		<h3>Sun 6 Aug </h3>
+		<h4>Choose a session</h4>
+		<tito-widget
+		event="basearcade/aug-6"
+		></tito-widget>
+	</div>	
+
 	<div class="event">
 		<h3>Saturday 1 July </h3>
 		<h4>Choose a session</h4>
@@ -491,11 +512,8 @@ h4{
 		<h4>Choose a session</h4>
 		<div class="next-event">SOLD OUT</div>
 	</div>	
-	<div class="event aug">
-		<h3>August 5 & 6 </h3>
-		<div class="next-event">On Sale Tue 13 June @ 8pm</div>
-		
-	</div>	
+
+
 </div>
 
 <div id="arcade-info">
