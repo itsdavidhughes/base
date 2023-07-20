@@ -549,8 +549,8 @@ h1 {
 
 .button_container {
   position: fixed;
-  top: 5%;
-  right: 2%;
+  top: 40px;
+  right: 40px;
   height: 27px;
   width: 35px;
   cursor: pointer;
@@ -608,17 +608,17 @@ h1 {
   height: 100%;
 }
 .overlay.open li {
-  animation: fadeInRight .5s ease forwards;
-  animation-delay: .35s;
+  animation: fadeInRight .25s ease forwards;
+  animation-delay: .175s;
 }
 .overlay.open li:nth-of-type(2) {
-  animation-delay: .4s;
+  animation-delay: .2s;
 }
 .overlay.open li:nth-of-type(3) {
-  animation-delay: .45s;
+  animation-delay: .23s;
 }
 .overlay.open li:nth-of-type(4) {
-  animation-delay: .50s;
+  animation-delay: .25s;
 }
 .overlay nav {
   position: relative;
@@ -679,13 +679,28 @@ h1 {
   }
 }
 
+nav ul li a{
+
+    font-family: 'Silkscreen', cursive;
+}
+
+#header h1{
+    font-family: 'Silkscreen', cursive;
+
+}
+
 </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 <div class="bg"></div>
-<div class="fg"><div id="header"><p>Private hire </p></div></div>
+<div class="fg"><div id="header"><h1>Private hire </h1></div></div>
 
 
 
@@ -700,12 +715,14 @@ h1 {
 
 
       
-      <iframe class="youtube-video"  src="https://www.youtube.com/embed/XWX3ra_Ufhk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
 
 
 
 		<h5>Do you take corporate or private hire bookings?</h5>
 		<p>Sometimes! Drop us an email at <a href="mailto:info@basearcade.com">info@basearcade.com</a> and we'll talk.</p>
+
+        <iframe class="youtube-video"  src="https://www.youtube.com/embed/XWX3ra_Ufhk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 		<h5>How can I stay up to date with all things Base Arcade?</h5>
 		<p>We thought you'd never ask.</p>
@@ -716,7 +733,7 @@ h1 {
 </div>
 
 
-<div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+<div class="button_container nav" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
 <div class="overlay" id="overlay">
     <nav class="overlay-menu">
         <ul>
@@ -724,7 +741,7 @@ h1 {
             <li><a href="#">Hire</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Follow us</a></li>
-            <li><a href="#">Join Newsletter</a></li>
+            <li><a href="#">Newsletter</a></li>
         </ul>
     </nav>
 </div>
