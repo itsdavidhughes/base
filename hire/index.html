@@ -96,7 +96,7 @@ it();
 	background-color: black;
 	position: absolute;
 	width: 100vw;
-	height: 80vh;
+	height: 20vh;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -106,7 +106,7 @@ it();
 	background-color: rgba(0,0,0,0.6);
 	position: relative;
 	width: 100vw;
-	height: 80vh;
+	height: 20vh;
 }
 	div#header {
 		font-family: "Pixelated MS Sans Serif", Arial;
@@ -500,51 +500,194 @@ h4{
 	margin-bottom: 3em;
 }
 
+
+/* Burger menu test */
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+  font-family: 'Varela Round', sans-serif;
+}
+.container p {
+  font-size: 20px;
+}
+.container a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #9d1abc;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  top: 5px;
+}
+.container a:after {
+  content: '';
+  position: absolute;
+  background: #9d1abc;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: .35s ease;
+}
+.container a:hover:after, .container a:focus:after, .container a:active:after {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Varela Round', serif;
+}
+
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: #fff;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background: #9d1abc;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-family: 'Varela Round', serif;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
 </style>
 
 </head>
 
 <body>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#" id="modal-button" style="display: block;" class="button good">JOIN Mailing list</a><span class="newsletter">For upcoming ticket & event info </span></div></div>
-
-<div id="tickets">
-
-	<div class="event sep">
-		<h3>Sat 2 September</h3>
-		<h4>Choose a session</h4>
-		<tito-widget
-		event="basearcade/sep-2"
-		></tito-widget>
-	</div>	
-	<div class="event sep second">
-		<h3>Sun 3 September </h3>
-		<h4>Choose a session</h4>
-		<tito-widget
-		event="basearcade/sep-3"
-		></tito-widget>
-	</div>	
+<div class="fg"><div id="header"><p>Private hire </p></div></div>
 
 
-	<div class="event aug">
-		<h3>Sat 5 August</h3>
-		<h4>Choose a session</h4>
-		<tito-widget
-		event="basearcade/aug-5"
-		></tito-widget>
-	</div>	
-	<div class="event aug second">
-		<h3>Sun 6 Aug </h3>
-		<h4>Choose a session</h4>
-		<tito-widget
-		event="basearcade/aug-6"
-		></tito-widget>
-	</div>	
-
-
-
-
-</div>
 
 <div id="arcade-info">
 
@@ -552,39 +695,36 @@ h4{
 
 		<div class="kicker">
 
-			<p>Get ready for your fix of retro arcade action in Belfast. We'll have a great selection of classic games from the 70s, 80s & 90s, pinball tables and a retro console corner. There's also a full bar — and our early sessions are always family friendly. </p>
+			<p>Interested in hiring the arcade for a private or corporate event? </p>
 		</div>
 
-		<iframe class="youtube-video"  src="https://www.youtube.com/embed/XWX3ra_Ufhk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <form
+        action="https://buttondown.email/api/emails/embed-subscribe/basearcadehire"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/basearcadehire', 'popupwindow')"
+        class="embeddable-buttondown-form"
+      >
+        <label for="first_name">Your first name</label>
+        <input type="first_name" name="first_name" id="first_name" />
+       
+        <label for="bd-email">Enter your email</label>
+        <input type="email" name="email" id="bd-email" />
 
-		<h5>Why sessions?</h5>
-		<p>We're running sessions so we can ensure an enjoyable experience for everyone. We want to make sure you get plenty of game time on the machines of your choice. A form of crowd/quality control, basically.</p>
+        <label for="bd-people">Number of people</label>
+        <input type="number" name="number" id="bd-num" />
+       
+        <input type="submit" value="Get in touch" />
 
-		<h5>So I can't just call down whenever?</h5>
-		<p>For now, no. We'll be running full weekend pop ups roughly once a month though. Event dates will always be published on this website. </p>
+      </form>
 
-		<h5>What does free play mean?</h5>
-		<p>Free play means that once you have a pass, all machines, pinball and consoles are free to play. No coins needed.</p>
+      <div id="wufoo-z14pl38q0lpo0ih"> Fill out my <a href="https://basearcade.wufoo.com/forms/z14pl38q0lpo0ih">online form</a>. </div> <script type="text/javascript"> var z14pl38q0lpo0ih; (function(d, t) { var s = d.createElement(t), options = { 'userName':'basearcade', 'formHash':'z14pl38q0lpo0ih', 'autoResize':true, 'height':'520', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { z14pl38q0lpo0ih = new WufooForm(); z14pl38q0lpo0ih.initialize(options); z14pl38q0lpo0ih.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script>
 
-		<h5>Will there be a bar?</h5>
-		<p>Yes! There’s a fully stocked bar with a selection of craft beers, regular beers and more. And we’ve devised some Arcade themed cocktails too to give you the steady nerves needed to get past Donkey Kong level 2! Last orders 11pm.</p>
+      <script type="text/javascript" src="https://form.jotform.com/jsform/231993982476373"></script>	
+      
+      <iframe class="youtube-video"  src="https://www.youtube.com/embed/XWX3ra_Ufhk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-		<h5>Kids allowed?</h5>
-		<p>The first sessions of each day (12-4pm & 11-3pm) will be family friendly. The later ones will be adult only. Bar still open for adults during the first session.</p>
 
-		<p>Kids are 15 and under. They must be accompanied by an adult with a paid ticket.</p>
-
-		<h5>Do you have food?</h5>
-		<p>Not from us. But you can leave, eat and return any time within your allocated session. We'll have a wristband system. Fancy.</p>
-
-		<h5>What games do you have?</h5>
-		<p>Honestly, we prefer to keep that as a bit of a surprise, it's more fun that way. But watch the wee video up there to get an idea for what's in store.</p>
-
-		<h5>Where is it?</h5>
-		<p>For now we're popping up in the Oh Yeah Music Centre, right in the heart of the Cathedral Quarter. But who knows where we might end up in future...</p>
-
-		<h5>Will you ever open this permanently?</h5>
-		<p>You must really like arcades! Let's just enjoy the fact that Belfast has a nice place to play original, retro arcades and pinball for now. But never say never...</p>
 
 		<h5>Do you take corporate or private hire bookings?</h5>
 		<p>Sometimes! Drop us an email at <a href="mailto:info@basearcade.com">info@basearcade.com</a> and we'll talk.</p>
@@ -597,134 +737,25 @@ h4{
 	</div>
 </div>
 
-<div id="myModal" class="modal">
 
-	
-
-	<!-- Modal content -->
-	
-	<div class="modal-content slideDown">
-
-		<div class="modal-header">
-			
-		
-			
-			<p>We'll be sharing details about future events & tickets in our newsletter.  </p>
-		</div>
-		<div class="modal-body">
-
-			
-			
-			<form
-			action="https://buttondown.email/api/emails/embed-subscribe/basearcade"
-			method="post"
-			target="popupwindow"
-			onsubmit="window.open('https://buttondown.email/basearcade', 'popupwindow')"
-			class="embeddable-buttondown-form"
-			>
-			<label for="bd-email">Stick your email in here</label>
-			<input type="email" required placeholder="e.g. john@aol.com" name="email" id="bd-email" class="fieldstyle" />
-			<input type="submit" value="Subscribe" class="submitstyle"/>
-		
-			</form>
-		
-
-	</div>
-
+<div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Hire</a></li>
+            <li><a href="#">Contact</a></li>\
+            <li><a href="#">Follow us</a></li>
+        </ul>
+    </nav>
 </div>
-<span class="close" id="closeModal">Na i'm alright</span>
-</div>
-
-
-
-
-<!--
-
-<audio id="track">
-	<source src="music.mp3" type="audio/mpeg" />
-  </audio>
-  
-  <div id="player-container" style="display:none;">
-	<div id="play-pause" class="play">Play</div>
-  </div>
-
 
 <script>
 
-	var track = document.getElementById('track');
-	
-	var controlBtn = document.getElementById('play-pause');
-	
-	function playPause() {
-		if (track.paused) {
-			track.play();
-			//controlBtn.textContent = "Pause";
-			controlBtn.className = "pause";
-		} else { 
-			track.pause();
-			 //controlBtn.textContent = "Play";
-			controlBtn.className = "play";
-		}
-	}
-	
-	controlBtn.addEventListener("click", playPause);
-	track.addEventListener("ended", function() {
-	  controlBtn.className = "play";
-	  
-	});
-	
-	var audio = document.querySelector('audio');
-	
-	if (audio) {
-	
-	  window.addEventListener('keydown', function (event) {
-	
-		var key = event.which || event.keyCode;
-	
-		if (key === 32) { // spacebar
-	
-		  // eat the spacebar, so it does not scroll the page
-		  event.preventDefault();
-	
-		  audio.paused ? audio.play() : audio.pause();
-		  
-		}
-	
-	  });
-	}
-	
-	
-	
-	
-	</script>-->
-
-<script>
-
-	// get the elements
-const modal = document.getElementById('myModal')
-const button = document.getElementById("modal-button")
-const close = document.querySelectorAll(".close")[0]
-const clickable = document.querySelectorAll('.clickable')
-
-const openModal = function() {
-	modal.style.display = "block"
-}
-const closeModal = function() {
-		modal.style.display = "none"
-	}
-	//event listeners
-button.addEventListener('click', openModal, false)
-close.addEventListener('click', closeModal, false)
-for (let i = 0; i < clickable.length; i++) {
-	clickable[i].addEventListener('click', openModal, false)
-}
-
-window.onclick = function(event) {
-	if (event.target == modal) {
-		modal.style.display = "none"
-	}
-}
-
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
 </script>
 
 </body>
