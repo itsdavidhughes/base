@@ -700,6 +700,12 @@ nav ul li a{
 
 }
 
+.embeddable-buttondown-form{
+  padding: 2em;
+  background:#ccc;
+  border: 1px solid #333;
+  margin-bottom: 1em;
+}
 
 </style>
 
@@ -723,23 +729,36 @@ nav ul li a{
       
 
 		<h5>Interested in hiring the arcade for a private or corporate event? </h5>
-        <br>
-		<p>At the minute, due to set up logistics we can only offer 2 specific dates for private hire:</p>
-        <ul>
-                <li>Sun 6 Aug - 7-10pm</li>
-                <li>Sun 3 Sep - 7-10pm</li>
-        </ul> 
-        <br>
+	  <br>
         
-        <p>For private events, we can accomodate minimum 50 people, maximum 120. </p>
+        <p>With Base currently being a pop up, we have to play a bit of calendar Tetris to make private hire work. But if you don't ask, you don't get! </p>
+     
+        <p>For private events, we usually accomodate minimum 30 people, maximum 120. But we can be flexible on numbers.</p>
 
-        <p>If any of the above dates suit, drop us an email at <a href="mailto:info@basearcade.com">info@basearcade.com</a> and we'll talk.</p>
+        <p>Get in touch below and we'll do our best to make it work. </p>
 
-        <p>If you'd like to book a different, specific date—get in touch anyway and we'll do our best to make it work. But no promises.</p>
+    
+        <form
+        action="https://buttondown.email/api/emails/embed-subscribe/basearcadehire"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/basearcadehire', 'popupwindow')"
+        class="embeddable-buttondown-form"
+      >
+      <h3>Fill this in and we'll get back to you</h3>
+        <label for="bd-email">Email</label>
+        <input type="email" name="email" id="bd-email" placeholder="johnsmith@gmail.com" />
 
-        <a href="mailto:info@basearcade.com" style="display: block;" class="button good">GET IN TOUCH</a>
+        <label for="first_name">Name</label>
+        <input type="text" name="metadata__first_name" id="first-name" placeholder="John Smith" />
 
+        <label for="num_people">Number of people</label>
+        <input type="text" name="metadata__num_people" id="num-people" placeholder="e.g 50-120" />
         <br>
+
+        <input type="submit" class="button good" value="Get in touch" />
+ 
+      </form>
 
 
         <h5>Here's a little taster of what it's like</h5>
