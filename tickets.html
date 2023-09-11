@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<script src="https://js.tito.io/v2/with/inline,test_mode" async></script>
+	<script src="https://js.tito.io/v2/with/inline" async></script>
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JN1W14YVXT"></script>
 
@@ -14,7 +14,7 @@
 </script>
 <meta name="viewport" content="width=device-width" />
 <meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
-<meta property="og:description" content="1 & 2 July at Oh Yeah Music Centre" />
+<meta property="og:description" content="21 & 22 Oct at Oh Yeah Music Centre" />
 <meta property="og:image" content="https://basearcade.com/og.png" />
 <meta property="og:url" content="https://basearcade.com" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -57,6 +57,18 @@ it();
 
 
 <style>
+
+body{
+	width: 100vw;
+    height: 100vh;
+}
+
+#main-site {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 100vw;
+}
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
@@ -137,7 +149,7 @@ it();
     color: #e8e8e8;
     cursor: pointer;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     min-width: 200px;
     padding: 0.5rem 1rem;
     text-transform: uppercase;
@@ -190,7 +202,7 @@ img.logo{
 	}
 
 	div#header{
-	padding: 1.6em;
+	padding: 1.2em;
 }
 
 .kicker{
@@ -201,8 +213,23 @@ div#tickets{
 	padding:1.6em;
 }
 
+#arcade-info .content p, 
+#arcade-info .content h5 {
+	font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+.kicker p{
+	font-size: 1rem;
+    font-weight: bold;
+}
+
+#arcade-info{
+	background: #eee;
+}
 
 }
+
+
 
 
 /*************/
@@ -230,6 +257,7 @@ div#tickets{
 
 	/* Black w/ opacity */
 	transition: all 0.5s ease 0.06s;
+	text-align: center;
 }
 
 
@@ -367,6 +395,8 @@ input, label{
 
 .submitstyle{
 	-webkit-appearance: none;
+	text-align:center;
+	font-family: "Pixelated MS Sans Serif", Arial;
 	
 	
 }
@@ -417,6 +447,10 @@ h4{
 	text-align: left;
 }
 
+#tickets .event .tito-widget-registration-unavailable p{
+	text-align: center;
+}
+
 .intro, .button, .newsletter, #pay {
 	text-align: center;
 }
@@ -445,13 +479,11 @@ h4{
     border-radius: 3px;
 	padding: 2em;
 	max-width: 920px;
-	margin: 0 auto;
+	margin: 2em auto;
 	text-align: center;
 }
 
-.event.aug h3 {
-	margin-bottom: 1em;
-}
+
 
 .youtube-video {
   aspect-ratio: 16 / 9;
@@ -472,34 +504,374 @@ h4{
 	margin-bottom: 1em;
 }
 
+.sold-out{
+	opacity: 0.6;
+}
+
+.second{
+	margin-bottom: 3em;
+}
+
+/* Burger menu  */
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+  font-family: 'Varela Round', sans-serif;
+}
+.container p {
+  font-size: 20px;
+}
+.container a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #9d1abc;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  top: 5px;
+}
+.container a:after {
+  content: '';
+  position: absolute;
+  background: #9d1abc;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: .35s ease;
+}
+.container a:hover:after, .container a:focus:after, .container a:active:after {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Varela Round', serif;
+}
+
+.button_container {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: #fff;
+  border: 1px solid #333;
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background: #CF3E2D;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  animation: fadeInRight .25s ease forwards;
+  animation-delay: .175s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .2s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .23s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .25s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-family: 'Varela Round', serif;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 5);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+nav ul li a{
+
+    font-family: 'Silkscreen', cursive;
+}
+
+#header h1{
+    font-family: 'Silkscreen', cursive;
+
+}
+
+@media screen and (max-width:600px) {
+
+.button_container{
+	top: 20px;
+	right: 20px
+}
+
+
+
+}
+
+/*button test
+
+*/
+
+button.menu {
+  display: block;
+  background-color: transparent;
+  color: #14191f; /* MenuLines picks up value from currentColor */
+  border: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 101;
+}
+
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+}
+
+/* MenuLines picks up value from currentColor */
+button:hover {
+  color: #CF3E2D;
+}
+button:focus {
+  color: #CF3E2D;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+footer{
+	
+	padding: 2rem 5rem 2rem 2rem;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	border-top: 1px solid #ccc;
+	font-size: 0.8em;
+}
+
+footer ul {
+	text-align: right;
+}
+footer ul li{
+	display: inline-block;
+
+}
+
+footer ul li a{
+	margin-right: 5px;
+
+}
+
+footer img{
+	max-width: 125px;
+}
+
+.embeddable-buttondown-form{
+  padding: 2em;
+  background:#ccc;
+  border: 1px solid #333;
+  margin-bottom: 1em;
+}
 </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+
+	<div id="main-site">
+
+	<button id="toggle" class="menu">
+		<span class="screen-reader-text">Menu</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 48 48">
+		<style>
+		  /* <![CDATA[ */
+		  #MenuFrame rect,
+		  #MenuText path {
+				fill: rgb(31, 38, 46);
+		  }
+		  #MenuLines rect,
+		  #MenuLines polygon,
+		  #MenuArrow polygon {
+				fill: currentColor;
+		  }
+		  /* ]]> */
+		</style>
+		<g id="MenuBg">
+		  <rect x="2" y="8" fill="rgb(196,203,212)" width="44" height="38"/>
+		</g>
+		<g id="MenuFrame">
+		  <rect x="2" y="6" width="4" height="2"/>
+		  <rect x="42" y="6" width="4" height="2"/>
+		  <rect x="0" y="8" width="2" height="38"/>
+		  <rect x="46" y="8" width="2" height="38"/>
+		  <rect x="2" y="46" width="44" height="2"/>
+		</g>
+		<g id="MenuLines">
+		  <rect x="14" y="17" width="20" height="3"/>
+		  <rect x="14" y="25" width="20" height="3"/>
+		  <polygon points="28,33 14,33 14,36 29.5,36"/>
+		</g>
+		<g id="MenuArrow">
+		  <polygon points="35,39 32,33 38,33"/>
+		</g>
+		<g id="MenuText">
+		  <path d="M8.16941,1.8945h1.23828l2.21875,2.22656l2.21875-2.22656h1.23828v6.10547h-1.23828V3.60934 l-2.21875,2.13672L9.40769,3.60934v4.39062H8.16941V1.8945z"/>
+		  <path d="M17.66975,1.8945h5.19922v1.08594h-3.96094v1.21875h3.50781v1.01953h-3.50781v1.69922H22.951v1.08203 h-5.28125V1.8945z"/>
+		  <path d="M25.16623,1.8945h1.23828l3.80469,1.99219V1.8945h1.23828v6.10547H30.2092V5.19919l-3.80469-1.98047 v4.78125h-1.23828V1.8945z"/>
+		  <path d="M33.79153,1.8945h1.23828v3.36328c0,0.27607,0.0377,0.52148,0.11328,0.73633 c0.07549,0.21484,0.18809,0.39648,0.33789,0.54492c0.14971,0.14844,0.33525,0.26113,0.55664,0.33789 c0.22129,0.07686,0.4791,0.11523,0.77344,0.11523c0.2916,0,0.54883-0.03838,0.77148-0.11523 c0.22266-0.07676,0.40879-0.18945,0.55859-0.33789c0.14971-0.14844,0.26231-0.33008,0.33789-0.54492 c0.07549-0.21484,0.11328-0.46025,0.11328-0.73633V1.8945h1.23828v3.51172c0,0.40107-0.06777,0.76562-0.20312,1.09375 c-0.13545,0.32812-0.33203,0.60938-0.58984,0.84375s-0.57363,0.41543-0.94727,0.54297 c-0.37373,0.12754-0.80019,0.19141-1.2793,0.19141c-0.4792,0-0.90566-0.06387-1.2793-0.19141 c-0.37373-0.12754-0.68945-0.30859-0.94727-0.54297S34.13,6.82809,33.99465,6.49997 c-0.13545-0.32812-0.20312-0.69268-0.20312-1.09375V1.8945z"/>
+		</g>
+	  </svg>  
+	  </button>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter">1 & 2 July @ Oh yeah music centre</span></div></div>
+<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter">Next Event 21 & 22 Oct <br> on sale 8pm tonight </span></div></div>
 
 <div id="tickets">
-	<div class="event">
-		<h3>Saturday 1 July </h3>
+
+	<div class="event oct">
+		<h3>Sat 21 October</h3>
 		<h4>Choose a session</h4>
-		<tito-widget
-		event="basearcade/jul-1"
-		></tito-widget>
-	</div>	
-	<div class="event">
-		<h3>Sunday 2 July </h3>
-		<h4>Choose a session</h4>
-		<tito-widget
-		event="basearcade/jul-2"
-		></tito-widget>
-	</div>	
-	<div class="event aug">
-		<h3>August 5 & 6 </h3>
-		<div class="next-event">On Sale Tue 13 June @ 8pm</div>
+		
+		 <tito-widget
+      event="basearcade/oct-21"
+    ></tito-widget>
 		
 	</div>	
+	<div class="event oct second">
+		<h3>Sun 22 October </h3>
+		<h4>Choose a session</h4>
+		<tito-widget
+      event="basearcade/oct-22"
+    ></tito-widget>
+	
+	</div>	
+
+
+
+
+
+
 </div>
 
 <div id="arcade-info">
@@ -516,17 +888,20 @@ h4{
 		<h5>Why sessions?</h5>
 		<p>We're running sessions so we can ensure an enjoyable experience for everyone. We want to make sure you get plenty of game time on the machines of your choice. A form of crowd/quality control, basically.</p>
 
-		<h5>So I can't just call down whenever?</h5>
-		<p>For now, no. We'll be running full weekend pop ups roughly once a month though. Event dates will always be published on this website. </p>
+		<h5>How much is it?</h5>
+		<p>£20 for adults, £8 for kids 15 and under. Once you have a pass, all machines are set to freeplay.  </p>
 
 		<h5>What does free play mean?</h5>
-		<p>Free play means that once you have a pass, all machines, pinball and consoles are free to play. No coins needed.</p>
+		<p>Free play means that once you have a pass, all machines, pinball and consoles are free to play. Base Arcade is a coin and token free zone.</p>
+
+		<h5>So I can't just call down whenever?</h5>
+		<p>For now, no. We'll be running full weekend pop ups roughly once a month though. Event dates will always be published on this website. </p>
 
 		<h5>Will there be a bar?</h5>
 		<p>Yes! There’s a fully stocked bar with a selection of craft beers, regular beers and more. And we’ve devised some Arcade themed cocktails too to give you the steady nerves needed to get past Donkey Kong level 2! Last orders 11pm.</p>
 
 		<h5>Kids allowed?</h5>
-		<p>The first session (12-4pm) will be family friendly. The later ones will be adult only. Bar still open for adults during the first session.</p>
+		<p>The first sessions of each day (12-4pm & 11-3pm) will be family friendly. The later ones will be adult only. Bar still open for adults during the first session.</p>
 
 		<p>Kids are 15 and under. They must be accompanied by an adult with a paid ticket.</p>
 
@@ -537,21 +912,36 @@ h4{
 		<p>Honestly, we prefer to keep that as a bit of a surprise, it's more fun that way. But watch the wee video up there to get an idea for what's in store.</p>
 
 		<h5>Where is it?</h5>
-		<p>We're popping up in the Oh Yeah Music Centre, right in the heart of the Cathedral Quarter. But who knows where we might end up.</p>
+		<p>For now we're popping up in the Oh Yeah Music Centre, right in the heart of the Cathedral Quarter. But who knows where we might end up in future...</p>
 
 		<h5>Will you ever open this permanently?</h5>
 		<p>You must really like arcades! Let's just enjoy the fact that Belfast has a nice place to play original, retro arcades and pinball for now. But never say never...</p>
 
-		<h5>Do you take corprate or private hire bookings?</h5>
-		<p>Sometimes! Drop us an email at <a href="mailto:info@basearcade.com">info@basearcade.com</a> and we'll talk.</p>
+		<h5>Do you take corporate or private hire bookings?</h5>
+		<p>Sometimes! Fill in <a href="/hire/">this wee form</a> and we'll talk.</p>
+
+		<h5>Can I cancel my tickets and come another time?</h5>
+		<p>Unfortunately we can't accomodate this. All ticket sales are non refundable and can't be transferred to future events. Feel free to give them to a friend or something though.</p>
 
 		<h5>How can I stay up to date with all things Base Arcade?</h5>
 		<p>We thought you'd never ask.</p>
-		<p>You can find us in all the usual spots, but we're probably most active at sharing behind the scenes stuff on <a href="https://www.instagram.com/basearcade_/">Instagram</a>. We share stuff to <a href="https://tr.ee/YP2d39-l0h">TikTok</a>, <a href="https://www.facebook.com/basearcade">Facebook</a>, <a href="https://twitter.com/BaseArcade">Twitter</a> and all too. And in the spirit of retro, there's also an internet <a href="#" id="modal-button">newsletter</a>. </p>
+		<p>You can find us in all the usual spots, but we're probably most active at sharing behind the scenes stuff on <a href="https://www.instagram.com/basearcade_/">Instagram</a>. We share stuff to <a href="https://tr.ee/YP2d39-l0h">TikTok</a>, <a href="https://www.facebook.com/basearcade">Facebook</a>, <a href="https://twitter.com/BaseArcade">Twitter</a> and all too. And in the spirit of retro, there's also an internet <a href="/newsletter/">newsletter</a>. </p>
 
-
+		
 	</div>
 </div>
+<footer>
+	
+	  
+	<span><img src="base-logo-site-footer.png"></span>
+
+	<ul>
+	  <li><a href="/terms/">Terms</a></li>
+	  <li><a href="/contact/">Contact</a></li>
+	  <li><a href="/follow/">Behind the scenes</a></li>
+	</ul>
+
+</footer>
 
 <div id="myModal" class="modal">
 
@@ -565,7 +955,7 @@ h4{
 			
 		
 			
-			<p>We'll be sharing launch details in our newsletter.  </p>
+			<p>We'll be sharing details about future events & tickets in our newsletter.  </p>
 		</div>
 		<div class="modal-body">
 
@@ -590,6 +980,27 @@ h4{
 </div>
 <span class="close" id="closeModal">Na i'm alright</span>
 </div>
+
+<!--<div class="button_container nav"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>-->
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <li><a href="/">Tickets</a></li>
+            <li><a href="/hire/">Hire</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/follow/">Follow us</a></li>
+            <li><a href="/newsletter/">Newsletter</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+</script>
 
 
 
@@ -682,6 +1093,6 @@ window.onclick = function(event) {
 }
 
 </script>
-
+</div><!--main site-->
 </body>
 </html>
