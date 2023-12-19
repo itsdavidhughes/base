@@ -1,0 +1,1134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="https://js.tito.io/v2/with/inline" async></script>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JN1W14YVXT"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JN1W14YVXT');
+</script>
+<meta name="viewport" content="width=device-width" />
+<meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
+<meta property="og:description" content="21 & 22 Oct at Oh Yeah Music Centre" />
+<meta property="og:image" content="https://basearcade.com/og.png" />
+<meta property="og:url" content="https://basearcade.com" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>Base Arcade | A Pop Up Retro Arcade Experience in Belfast | Oh Yeah Music Centre Belfast </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+const bgArray = new Array();
+bgArray[0] = "0";
+bgArray[1] = "1";
+bgArray[2] = "2";
+bgArray[3] = "3";
+bgArray[4] = "4";
+bgArray[5] = "5";
+bgArray[6] = "6";
+bgArray[7] = "7";
+bgArray[8] = "8";
+bgArray[9] = "9";
+bgArray[10] = "10";
+
+const url = "https://basearcade.com/";
+let i = 0;
+let l = bgArray.length;
+
+function it() {
+	$(".bg").css("background-image", "url(" + url + bgArray[i] + ".gif)");
+
+	if (++i <= l) {
+		setTimeout(it, 2000);
+	}
+	if (i == l) {
+		i = 0;
+	}
+}
+
+it();
+
+	</script>
+
+
+<style>
+
+body{
+	width: 100vw;
+    height: 100vh;
+}
+
+#main-site {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 100vw;
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif.woff") format("woff");
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif_bold.woff") format("woff");
+  src: url("https://unpkg.com/98.css@0.1.4/build/ms_sans_serif_bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+/* -------------------------------------
+		Hiya 
+------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	font-size: 1em;
+	line-height: 1.618;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+
+
+.bg {
+	background-color: black;
+	position: absolute;
+	width: 100vw;
+	height: 80vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.fg {
+	background-color: rgba(0,0,0,0.6);
+	position: relative;
+	width: 100vw;
+	height: 80vh;
+}
+	div#header {
+		font-family: "Pixelated MS Sans Serif", Arial;
+		font-weight: 100;
+		font-size: 2em;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		color: white;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform: translateY( -50%);
+		margin: 0;
+		padding: 2em;
+		box-sizing: border-box;
+	}
+
+	.button{
+
+	
+	background: #CF3E2D;
+    border-bottom: 6px inset rgba(0,0,0,.5);
+    border-left: 6px inset rgba(0,0,0,.5);
+    border-right: 6px inset rgba(255,255,255,.5);
+    border-top: 6px inset rgba(255,255,255,.5);
+    box-sizing: border-box;
+    color: #e8e8e8;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    min-width: 200px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    width: auto;
+    font-weight: 600;
+	font-family: "Pixelated MS Sans Serif", Arial;
+	max-width: 480px;
+	margin: 0 auto;
+}
+	
+
+
+
+
+	a{
+		text-decoration: none;
+	}
+
+	h3, h4 {
+		font-family: "Pixelated MS Sans Serif", Arial;
+	}
+
+img.logo{
+	max-width: 1280px;
+	width: 100%;
+}
+
+.mobile{
+	display: none;
+}
+
+.kicker{
+	text-align: center;
+	font-size: 2rem;
+}
+
+
+@media screen and (max-width:600px) {
+
+	.logo{max-width: 100%;}
+
+	.mobile{display: block;}
+
+	.desktop{
+		display: none;
+	}
+
+	.modal-content{
+		max-width: 60%;
+	}
+
+	div#header{
+	padding: 1.2em;
+}
+
+.kicker{
+	font-size: 1.5rem;
+}
+
+div#tickets{
+	padding:1.6em;
+}
+
+#arcade-info .content p, 
+#arcade-info .content h5 {
+	font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+.kicker p{
+	font-size: 1rem;
+    font-weight: bold;
+}
+
+#arcade-info{
+	background: #eee;
+}
+
+}
+
+
+
+
+/*************/
+/*   MODAL   */
+/*************/
+/* The Modal (background) */
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: hidden;
+	/* Enable scroll if needed */
+
+	background-image: url(pixel-static.gif);
+
+	/* Black w/ opacity */
+	transition: all 0.5s ease 0.06s;
+	text-align: center;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto 5% auto;
+	/* 15% from the top and centered */
+
+	max-width: 20%;
+	/* Could be more or less, depending on screen size */
+	visibility: hidden;
+	
+	padding: 1.6rem 3rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.modal-header {
+
+	margin-bottom: 1rem;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+
+.modal-footer > input {
+	margin-top: 0.8rem;
+	margin-bottom: 0rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+
+
+
+.slideDown {
+
+	visibility: visible !important;
+}
+
+input{
+
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+input, label{
+	display:block;
+	width: 100%;
+}
+
+
+#closeModal{
+	text-align: center;
+	display: inline-block;
+	
+}
+
+#closeModal:hover{
+	cursor: pointer;
+	
+}
+
+
+.modal p{
+	position: static;
+	transform: none;
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+}
+
+
+.modal-header h2, .modal-header p{
+	font-family: "Pixelated MS Sans Serif", Arial !important;
+	line-height: 1.3;
+}
+@media screen and (max-width:600px) {
+
+.modal-content{
+	max-width: 60%;
+}
+
+
+
+}
+
+.intro{
+	font-size: 16px;
+	display: block; color: #f2f2f2; margin: 6em 0em; font-weight: bold;
+	font-family: "Pixelated MS Sans Serif", Arial;	
+
+}
+
+.newsletter{
+
+	font-size: 12px; display: block; color: #f2f2f2; margin: 3em 0em; font-weight: bold;
+	font-family: "Pixelated MS Sans Serif", Arial;
+
+}
+
+.modal-header p{
+	padding:0;
+	text-align: center;
+	
+}
+
+.modal-header h2{
+	font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+.close{
+	font-family: "Pixelated MS Sans Serif", Arial;
+	font-size: 12px;
+	color: black;
+	text-decoration: underline;
+	background: white;
+	opacity: 0.8;
+	display: inline-block;
+	padding: 0.5em;
+	
+}
+
+.fieldstyle{
+	margin-bottom: 0.5em;
+}
+
+.submitstyle{
+	-webkit-appearance: none;
+	text-align:center;
+	font-family: "Pixelated MS Sans Serif", Arial;
+	
+	
+}
+
+.submitstyle:hover{
+	cursor: pointer;
+}
+
+#tickets, #arcade-info{
+	padding: 3rem;
+
+}
+
+::-webkit-scrollbar{
+	width: 0px!important;
+}
+
+#tickets h3{
+	font-size: 18px;
+    text-transform: uppercase;
+	text-align: center;
+ 
+}
+
+
+
+h4{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #6e6e6e;
+    letter-spacing: 1px;
+	text-align: center;
+}
+
+#tickets .event{
+	text-align: left;
+}
+
+#tickets .event label{
+	font-size: 14px;
+    font-weight: bold;
+	text-align: left;
+}
+
+
+#tickets .event p{
+	font-weight: normal;
+	text-align: left;
+}
+
+#tickets .event .tito-widget-registration-unavailable p{
+	text-align: center;
+}
+
+.intro, .button, .newsletter, #pay {
+	text-align: center;
+}
+
+#arcade-info{
+	text-align: center;
+	border-top: 1px solid #b2b2b2;
+	
+
+}
+
+.content{
+	max-width: 920px;
+    margin: 0 auto;
+	
+
+}
+
+.content h4{
+	text-align: left;
+}
+
+.next-event{
+	background: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	padding: 2em;
+	max-width: 920px;
+	margin: 2em auto;
+	text-align: center;
+}
+
+
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.tito-registration-progress{ display:none !important;}
+
+#tickets .tito-overlay .tito-registration .tito-registration-progress{display:none !important;}
+
+.tito-widget{
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+}
+
+
+#arcade-info p{
+	margin-bottom: 1em;
+}
+
+.sold-out{
+	opacity: 0.6;
+}
+
+.second{
+	margin-bottom: 3em;
+}
+
+/* Burger menu  */
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+  font-family: 'Varela Round', sans-serif;
+}
+.container p {
+  font-size: 20px;
+}
+.container a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #9d1abc;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  top: 5px;
+}
+.container a:after {
+  content: '';
+  position: absolute;
+  background: #9d1abc;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: .35s ease;
+}
+.container a:hover:after, .container a:focus:after, .container a:active:after {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Varela Round', serif;
+}
+
+.button_container {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: #fff;
+  border: 1px solid #333;
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background: #CF3E2D;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  animation: fadeInRight .25s ease forwards;
+  animation-delay: .175s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .2s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .23s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .25s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-family: 'Varela Round', serif;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 5);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+nav ul li a{
+
+    font-family: 'Silkscreen', cursive;
+}
+
+#header h1{
+    font-family: 'Silkscreen', cursive;
+
+}
+
+@media screen and (max-width:600px) {
+
+.button_container{
+	top: 20px;
+	right: 20px
+}
+
+
+
+}
+
+/*button test
+
+*/
+
+button.menu {
+  display: block;
+  background-color: transparent;
+  color: #14191f; /* MenuLines picks up value from currentColor */
+  border: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 101;
+}
+
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+}
+
+/* MenuLines picks up value from currentColor */
+button:hover {
+  color: #CF3E2D;
+}
+button:focus {
+  color: #CF3E2D;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+footer{
+	
+	padding: 2rem 5rem 2rem 2rem;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	border-top: 1px solid #ccc;
+	font-size: 0.8em;
+}
+
+footer ul {
+	text-align: right;
+}
+footer ul li{
+	display: inline-block;
+
+}
+
+footer ul li a{
+	margin-right: 5px;
+
+}
+
+footer img{
+	max-width: 125px;
+}
+
+.embeddable-buttondown-form{
+  padding: 2em;
+  background:#ccc;
+  border: 1px solid #333;
+  margin-bottom: 1em;
+}
+
+#tito-overlay footer {grid-template-columns: 100% !important;}
+
+.shopify-buy__btn  {
+	background-color:#CF3E2D !important;
+}
+
+.shopify-base{
+	display: grid;
+  	grid-template-columns: auto auto auto auto;
+  	padding: 10px;
+}
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="main-site">
+
+	<button id="toggle" class="menu">
+		<span class="screen-reader-text">Menu</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 48 48">
+		<style>
+		  /* <![CDATA[ */
+		  #MenuFrame rect,
+		  #MenuText path {
+				fill: rgb(31, 38, 46);
+		  }
+		  #MenuLines rect,
+		  #MenuLines polygon,
+		  #MenuArrow polygon {
+				fill: currentColor;
+		  }
+		  /* ]]> */
+		</style>
+		<g id="MenuBg">
+		  <rect x="2" y="8" fill="rgb(196,203,212)" width="44" height="38"/>
+		</g>
+		<g id="MenuFrame">
+		  <rect x="2" y="6" width="4" height="2"/>
+		  <rect x="42" y="6" width="4" height="2"/>
+		  <rect x="0" y="8" width="2" height="38"/>
+		  <rect x="46" y="8" width="2" height="38"/>
+		  <rect x="2" y="46" width="44" height="2"/>
+		</g>
+		<g id="MenuLines">
+		  <rect x="14" y="17" width="20" height="3"/>
+		  <rect x="14" y="25" width="20" height="3"/>
+		  <polygon points="28,33 14,33 14,36 29.5,36"/>
+		</g>
+		<g id="MenuArrow">
+		  <polygon points="35,39 32,33 38,33"/>
+		</g>
+		<g id="MenuText">
+		  <path d="M8.16941,1.8945h1.23828l2.21875,2.22656l2.21875-2.22656h1.23828v6.10547h-1.23828V3.60934 l-2.21875,2.13672L9.40769,3.60934v4.39062H8.16941V1.8945z"/>
+		  <path d="M17.66975,1.8945h5.19922v1.08594h-3.96094v1.21875h3.50781v1.01953h-3.50781v1.69922H22.951v1.08203 h-5.28125V1.8945z"/>
+		  <path d="M25.16623,1.8945h1.23828l3.80469,1.99219V1.8945h1.23828v6.10547H30.2092V5.19919l-3.80469-1.98047 v4.78125h-1.23828V1.8945z"/>
+		  <path d="M33.79153,1.8945h1.23828v3.36328c0,0.27607,0.0377,0.52148,0.11328,0.73633 c0.07549,0.21484,0.18809,0.39648,0.33789,0.54492c0.14971,0.14844,0.33525,0.26113,0.55664,0.33789 c0.22129,0.07686,0.4791,0.11523,0.77344,0.11523c0.2916,0,0.54883-0.03838,0.77148-0.11523 c0.22266-0.07676,0.40879-0.18945,0.55859-0.33789c0.14971-0.14844,0.26231-0.33008,0.33789-0.54492 c0.07549-0.21484,0.11328-0.46025,0.11328-0.73633V1.8945h1.23828v3.51172c0,0.40107-0.06777,0.76562-0.20312,1.09375 c-0.13545,0.32812-0.33203,0.60938-0.58984,0.84375s-0.57363,0.41543-0.94727,0.54297 c-0.37373,0.12754-0.80019,0.19141-1.2793,0.19141c-0.4792,0-0.90566-0.06387-1.2793-0.19141 c-0.37373-0.12754-0.68945-0.30859-0.94727-0.54297S34.13,6.82809,33.99465,6.49997 c-0.13545-0.32812-0.20312-0.69268-0.20312-1.09375V1.8945z"/>
+		</g>
+	  </svg>  
+	  </button>
+<div class="bg"></div>
+<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#" style="display: block;" id="modal-button" class="button good">Get a reminder</a><span class="newsletter">Next Events 1, 2 & 3 DEC <br> On Sale tonight @ 8pm </span></div></div>
+
+
+<!-- BEANIE -->
+
+<div id='product-component-1702322554110'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'basearcade.myshopify.com',
+      storefrontAccessToken: 'e19afa51f93f7790e054532fcf441437',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '8993118388546',
+        node: document.getElementById('product-component-1702322554110'),
+        moneyFormat: '%C2%A3%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      }
+    },
+    "contents": {
+      "img": false,
+      "title": false,
+      "price": false
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    }
+  },
+  "toggle": {}
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+<!--/BEANIE-->
+
+</div>
+
+
+</div>
+
+
+<footer>
+	
+	  
+	<span><img src="base-logo-site-footer.png"></span>
+
+	<ul>
+	  <li><a href="/terms/">Terms</a></li>
+	  <li><a href="/contact/">Contact</a></li>
+	  <li><a href="/follow/">Behind the scenes</a></li>
+	</ul>
+
+</footer>
+
+<div id="myModal" class="modal">
+
+	
+
+	<!-- Modal content -->
+	
+	<div class="modal-content slideDown">
+
+		<div class="modal-header">
+			
+		
+			
+			<p>We'll be sharing details about future events & tickets in our newsletter.  </p>
+		</div>
+		<div class="modal-body">
+
+			
+			
+			<form
+			action="https://buttondown.email/api/emails/embed-subscribe/basearcade"
+			method="post"
+			target="popupwindow"
+			onsubmit="window.open('https://buttondown.email/basearcade', 'popupwindow')"
+			class="embeddable-buttondown-form"
+			>
+			<label for="bd-email">Stick your email in here</label>
+			<input type="email" required placeholder="e.g. john@aol.com" name="email" id="bd-email" class="fieldstyle" />
+			<input type="submit" value="Subscribe" class="submitstyle"/>
+		
+			</form>
+		
+
+	</div>
+
+</div>
+<span class="close" id="closeModal">Na i'm alright</span>
+</div>
+
+<!--<div class="button_container nav"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>-->
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <li><a href="/">Tickets</a></li>
+            <li><a href="/hire/">Hire</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/follow/">Follow us</a></li>
+            <li><a href="/newsletter/">Newsletter</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+</script>
+
+
+
+
+<!--
+
+<audio id="track">
+	<source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  
+  <div id="player-container" style="display:none;">
+	<div id="play-pause" class="play">Play</div>
+  </div>
+
+
+<script>
+
+	var track = document.getElementById('track');
+	
+	var controlBtn = document.getElementById('play-pause');
+	
+	function playPause() {
+		if (track.paused) {
+			track.play();
+			//controlBtn.textContent = "Pause";
+			controlBtn.className = "pause";
+		} else { 
+			track.pause();
+			 //controlBtn.textContent = "Play";
+			controlBtn.className = "play";
+		}
+	}
+	
+	controlBtn.addEventListener("click", playPause);
+	track.addEventListener("ended", function() {
+	  controlBtn.className = "play";
+	  
+	});
+	
+	var audio = document.querySelector('audio');
+	
+	if (audio) {
+	
+	  window.addEventListener('keydown', function (event) {
+	
+		var key = event.which || event.keyCode;
+	
+		if (key === 32) { // spacebar
+	
+		  // eat the spacebar, so it does not scroll the page
+		  event.preventDefault();
+	
+		  audio.paused ? audio.play() : audio.pause();
+		  
+		}
+	
+	  });
+	}
+	
+	
+	
+	
+	</script>-->
+
+<script>
+
+	// get the elements
+const modal = document.getElementById('myModal')
+const button = document.getElementById("modal-button")
+const close = document.querySelectorAll(".close")[0]
+const clickable = document.querySelectorAll('.clickable')
+
+const openModal = function() {
+	modal.style.display = "block"
+}
+const closeModal = function() {
+		modal.style.display = "none"
+	}
+	//event listeners
+button.addEventListener('click', openModal, false)
+close.addEventListener('click', closeModal, false)
+for (let i = 0; i < clickable.length; i++) {
+	clickable[i].addEventListener('click', openModal, false)
+}
+
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none"
+	}
+}
+
+</script>
+</div><!--main site-->
+</body>
+</html>
