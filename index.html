@@ -1182,6 +1182,28 @@ window.onclick = function(event) {
 }
 
 </script>
+<script>
+
+	document.addEventListener("DOMContentLoaded", function () {
+		function replaceText() {
+			document.querySelectorAll(".tito-release--status").forEach(el => {
+				// Check if the first child is a text node and contains "Upcoming"
+				if (el.firstChild && el.firstChild.nodeType === Node.TEXT_NODE) {
+					el.firstChild.textContent = el.firstChild.textContent.replace("Upcoming", "On sale").trim();
+				}
+			});
+		}
+	
+		// Run immediately in case elements are already loaded
+		replaceText();
+	
+		// Observe changes to catch dynamically loaded content
+		const observer = new MutationObserver(replaceText);
+		observer.observe(document.body, { childList: true, subtree: true });
+	});
+	
+	
+	</script>
 </div><!--main site-->
 </body>
 </html>
