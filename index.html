@@ -271,7 +271,7 @@ div#tickets{
 	margin: 15% auto 5% auto;
 	/* 15% from the top and centered */
 
-	max-width: 20%;
+	max-width: 50%;
 	/* Could be more or less, depending on screen size */
 	visibility: hidden;
 	
@@ -346,13 +346,25 @@ input, label{
 	font-family: "Pixelated MS Sans Serif", Arial !important;
 	line-height: 1.3;
 }
-@media screen and (max-width:600px) {
+
+
+
+@media screen and (max-width:810px) {
 
 .modal-content{
 	max-width: 60%;
 }
 
 
+
+}
+
+@media screen and (max-width:600px) {
+
+.modal-content{
+	max-width: 90%;
+	padding: 1.6rem 2rem;
+}
 
 }
 
@@ -803,7 +815,8 @@ footer img{
 
 .two-events{
 	display: block;
-	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-top: 16px;
 	font-size: 12px;
     color: #f2f2f2;
     font-weight: bold;
@@ -865,7 +878,7 @@ footer img{
 	  </svg>  
 	  </button>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter"><span class="two-events">Next Event: 14-16 Feb <br>On Sale Now</span></span> </div></div>
+<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#" id="modal-button" style="display: block;" class="button">Join Malinglist</a><span class="newsletter two-events">For march tickets</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
 
 <div id="tickets">
 
@@ -982,7 +995,7 @@ footer img{
 
 		<h5>How can I stay up to date with all things Base Arcade?</h5>
 		<p>We thought you'd never ask.</p>
-		<p>You can find us in all the usual spots, but we're probably most active at sharing behind the scenes stuff on <a href="https://www.instagram.com/basearcade_/">Instagram</a>. We share stuff to <a href="https://tr.ee/YP2d39-l0h">TikTok</a>, <a href="https://www.facebook.com/basearcade">Facebook</a>, <a href="https://twitter.com/BaseArcade">Twitter</a> and all too. And in the spirit of retro, there's also an internet <a href="/newsletter/">newsletter</a>. </p>
+		<p>You can find us in all the usual spots, but we're probably most active at sharing behind the scenes stuff on <a href="https://www.instagram.com/basearcade_/">Instagram</a>. We share stuff to <a href="https://tr.ee/YP2d39-l0h">TikTok</a>, <a href="https://www.facebook.com/basearcade">Facebook</a>, <a href="https://twitter.com/BaseArcade">Twitter</a> and all too. And in the spirit of retro, there's also an internet <a href="/newsletter/">mailing list</a>. </p>
 		<h5>Will you ever open this permanently?</h5>
 		<p>Never say never...</p>
 		
@@ -1013,7 +1026,7 @@ footer img{
 			
 		
 			
-			<p>Get a reminder when tickets go on sale in our newsletter  </p>
+			<p>Find out when March tickets go on sale first in our mailing list</p>
 		</div>
 		<div class="modal-body">
 
@@ -1047,7 +1060,7 @@ footer img{
             <li><a href="/hire/">Hire</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/follow/">Follow us</a></li>
-            <li><a href="/newsletter/">Newsletter</a></li>
+            <li><a href="/newsletter/">Mailing List</a></li>
         </ul>
     </nav>
 </div>
