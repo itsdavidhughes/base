@@ -14,7 +14,7 @@
 </script>
 <meta name="viewport" content="width=device-width" />
 <meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
-<meta property="og:description" content="14-16 Feb at Banana Block" />
+<meta property="og:description" content="14-16 Feb & 14-16 Mar at Banana Block" />
 <meta property="og:image" content="https://basearcade.com/og.png" />
 <meta property="og:url" content="https://basearcade.com" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -24,20 +24,20 @@
 
 <script type="text/javascript">
 const bgArray = new Array();
-bgArray[0] = "0";
-bgArray[1] = "1";
-bgArray[2] = "2";
-bgArray[3] = "3";
-bgArray[4] = "4";
-bgArray[5] = "5";
-bgArray[6] = "6";
-bgArray[7] = "7";
-bgArray[8] = "8";
-bgArray[9] = "9";
-bgArray[10] = "10";
+bgArray[11] = "11";
+bgArray[12] = "12";
+bgArray[13] = "13";
+bgArray[14] = "14";
+bgArray[15] = "15";
+bgArray[16] = "16";
+bgArray[17] = "17";
+bgArray[18] = "18";
+bgArray[19] = "19";
+bgArray[20] = "20";
+bgArray[21] = "21";
 
 const url = "https://basearcade.com/";
-let i = 0;
+let i = 11;
 let l = bgArray.length;
 
 function it() {
@@ -47,7 +47,7 @@ function it() {
 		setTimeout(it, 2000);
 	}
 	if (i == l) {
-		i = 0;
+		i = 11;
 	}
 }
 
@@ -115,7 +115,7 @@ body{
 }
 
 .fg {
-	background-color: rgba(0,0,0,0.6);
+	background-color: #360648b0;
 	position: relative;
 	width: 100vw;
 	height: 80vh;
@@ -139,8 +139,8 @@ body{
 
 	.button{
 
-	
-	background: #CF3E2D;
+
+	background: #AF0A0E;
     border-bottom: 6px inset rgba(0,0,0,.5);
     border-left: 6px inset rgba(0,0,0,.5);
     border-right: 6px inset rgba(255,255,255,.5);
@@ -823,6 +823,18 @@ footer img{
     font-family: "Pixelated MS Sans Serif", Arial;
 	text-align: center;
 }
+
+/*new stuff */
+
+.shadowfilter {
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	
+}.shadowfilter:hover {
+	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -878,7 +890,7 @@ footer img{
 	  </svg>  
 	  </button>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="../smol-logo.png"/> <img class="logo desktop" src="../big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" id="" style="display: block;" class="button">Get tickets</a><span class="newsletter two-events">March Pre sale live now!</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
+<div class="fg"><div id="header" class="large"><img class="logo shadowfilter mobile" src="../smol-logo.png"/> <img class="logo desktop shadowfilter" src="../big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" id="" style="display: block;" class="button">Get tickets</a><span class="newsletter two-events">March Pre sale live!</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
 
 <div id="tickets">
 
