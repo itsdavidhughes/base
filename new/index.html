@@ -115,7 +115,7 @@ body{
 }
 
 .fg {
-	background-color: rgba(0,0,0,0.6);
+	background-color: #360648b0;
 	position: relative;
 	width: 100vw;
 	height: 80vh;
@@ -139,8 +139,8 @@ body{
 
 	.button{
 
-	
-	background: #CF3E2D;
+
+	background: ##AF0A0E;
     border-bottom: 6px inset rgba(0,0,0,.5);
     border-left: 6px inset rgba(0,0,0,.5);
     border-right: 6px inset rgba(255,255,255,.5);
@@ -823,6 +823,18 @@ footer img{
     font-family: "Pixelated MS Sans Serif", Arial;
 	text-align: center;
 }
+
+/*new stuff */
+
+.shadowfilter {
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	
+}.shadowfilter:hover {
+	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -878,7 +890,7 @@ footer img{
 	  </svg>  
 	  </button>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="../smol-logo.png"/> <img class="logo desktop" src="../big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" id="" style="display: block;" class="button">Get tickets</a><span class="newsletter two-events">March Pre sale live now!</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
+<div class="fg"><div id="header" class="large"><img class="logo shadowfilter mobile" src="../smol-logo.png"/> <img class="logo desktop shadowfilter" src="../big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" id="" style="display: block;" class="button">Get tickets</a><span class="newsletter two-events">March Pre sale live now!</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
 
 <div id="tickets">
 
