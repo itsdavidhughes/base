@@ -1186,6 +1186,35 @@ window.onclick = function(event) {
 	
 	
 	</script>
+
 </div><!--main site-->
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  const konamiCode = [
+		"ArrowUp",
+		"ArrowUp",
+		"ArrowDown",
+		"ArrowDown",
+		"ArrowLeft",
+		"ArrowRight",
+		"ArrowLeft",
+		"ArrowRight",
+		"b",
+		"a"
+	  ];
+	  
+	  let inputSequence = [];
+  
+	  document.addEventListener("keydown", function (event) {
+		inputSequence.push(event.key);
+		inputSequence = inputSequence.slice(-konamiCode.length); // Keep only last 10 keys
+  
+		if (inputSequence.join("") === konamiCode.join("")) {
+		  window.location.href = "/level99"; // Change this to your target page
+		}
+	  });
+	});
+  </script>
 </body>
 </html>
