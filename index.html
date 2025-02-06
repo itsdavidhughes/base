@@ -14,7 +14,7 @@
 </script>
 <meta name="viewport" content="width=device-width" />
 <meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
-<meta property="og:description" content="14-16 Feb at Banana Block" />
+<meta property="og:description" content="14-16 Feb & 14-16 Mar at Banana Block" />
 <meta property="og:image" content="https://basearcade.com/og.png" />
 <meta property="og:url" content="https://basearcade.com" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -24,20 +24,20 @@
 
 <script type="text/javascript">
 const bgArray = new Array();
-bgArray[0] = "0";
-bgArray[1] = "1";
-bgArray[2] = "2";
-bgArray[3] = "3";
-bgArray[4] = "4";
-bgArray[5] = "5";
-bgArray[6] = "6";
-bgArray[7] = "7";
-bgArray[8] = "8";
-bgArray[9] = "9";
-bgArray[10] = "10";
+bgArray[11] = "11";
+bgArray[12] = "12";
+bgArray[13] = "13";
+bgArray[14] = "14";
+bgArray[15] = "15";
+bgArray[16] = "16";
+bgArray[17] = "17";
+bgArray[18] = "18";
+bgArray[19] = "19";
+bgArray[20] = "20";
+bgArray[21] = "21";
 
 const url = "https://basearcade.com/";
-let i = 0;
+let i = 11;
 let l = bgArray.length;
 
 function it() {
@@ -47,7 +47,7 @@ function it() {
 		setTimeout(it, 2000);
 	}
 	if (i == l) {
-		i = 0;
+		i = 11;
 	}
 }
 
@@ -108,17 +108,17 @@ body{
 	background-color: black;
 	position: absolute;
 	width: 100vw;
-	height: 80vh;
+	height: 90vh;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 
 .fg {
-	background-color: rgba(0,0,0,0.6);
+	background-color: #360648b0;
 	position: relative;
 	width: 100vw;
-	height: 80vh;
+	height: 90vh;
 }
 	div#header {
 		font-family: "Pixelated MS Sans Serif", Arial;
@@ -139,8 +139,8 @@ body{
 
 	.button{
 
-	
-	background: #CF3E2D;
+
+	background: #AF0A0E;
     border-bottom: 6px inset rgba(0,0,0,.5);
     border-left: 6px inset rgba(0,0,0,.5);
     border-right: 6px inset rgba(255,255,255,.5);
@@ -823,6 +823,18 @@ footer img{
     font-family: "Pixelated MS Sans Serif", Arial;
 	text-align: center;
 }
+
+/*new stuff */
+
+.shadowfilter {
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	
+}.shadowfilter:hover {
+	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -878,7 +890,7 @@ footer img{
 	  </svg>  
 	  </button>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#" id="modal-button" style="display: block;" class="button">Join Malinglist</a><span class="newsletter two-events">March tickets on sale Thu @ 8pm</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
+<div class="fg"><div id="header" class="large"><img class="logo shadowfilter mobile" src="smol-logo.png"/> <img class="logo desktop shadowfilter" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" id="" style="display: block;" class="button">Get tickets</a><span class="newsletter two-events">March on sale @ 8pm tonight!</span><span class="newsletter"> — </span><span class="newsletter two-events">February sold out</span> </div></div>
 
 <div id="tickets">
 
@@ -889,11 +901,11 @@ footer img{
 	<div id="feb" class="event may second">
 		
 
-		<h3>Fri 14 Feb</h3>
-		<h4>NI Science Fest • 7pm-11pm • 18+</h4>
+		<h3>Fri 14 Mar</h3>
+		<h4>7pm-11pm • 18+</h4>
 		
 		<tito-widget
-		event="basearcade/feb-14"
+		event="basearcade/mar-14"
 	  ></tito-widget>
 		
 	</div>	
@@ -901,11 +913,11 @@ footer img{
 	<div id="feb" class="event may second">
 		
 
-		<h3>Sat 15 Feb</h3>
-		<h4>NI Science Fest • 11am-11pm • 3 Sessions</h4>
+		<h3>Sat 15 Mar</h3>
+		<h4>11am-7pm • 2 Sessions</h4>
 		
 		<tito-widget
-		event="basearcade/feb-15"
+		event="basearcade/mar-15"
 	  ></tito-widget>
 		
 	</div>	
@@ -913,11 +925,11 @@ footer img{
 	<div id="feb" class="event may second">
 		
 
-		<h3>Sun 16 Feb</h3>
-		<h4>NI Science Fest • 11am-3pm • Family friendly</h4>
+		<h3>Sun 16 Mar</h3>
+		<h4>11am-7pm • 2 Sessions</h4>
 		
 		<tito-widget
-		event="basearcade/feb-16"
+		event="basearcade/mar-16"
 	  ></tito-widget>
 		
 	</div>	
@@ -988,7 +1000,7 @@ footer img{
 		<p>Banana Block is a short Glider (G1) route from the city centre. Get off at Connswater and walk about 90 seconds round the corner to the venue. There's free parking nearby too! </p>
 
 		<h5>Do you take corporate or private hire bookings?</h5>
-		<p>Sometimes! Fill in <a href="/hire/">this wee form</a> and we'll talk.</p>
+		<p>Sometimes! Fill in <a href="../hire/">this wee form</a> and we'll talk.</p>
 
 		<h5>Can I cancel my tickets or come another time?</h5>
 		<p>Being a pop up, it's sometimes hard for us to know when our next event will be — so it's hard to transfer tickets to future events. With that in mind, all ticket sales are final. Please try your best to make it when you get tickets, or transfer them to a friend. They'll love it.</p>
