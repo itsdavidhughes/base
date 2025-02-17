@@ -14,45 +14,30 @@
 </script>
 <meta name="viewport" content="width=device-width" />
 <meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
-<meta property="og:description" content="14-16 Feb & 14-16 Mar at Banana Block" />
+<meta property="og:description" content="14-16 Feb at Banana Block" />
 <meta property="og:image" content="https://basearcade.com/og.png" />
 <meta property="og:url" content="https://basearcade.com" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
 <title>Base Arcade | A Pop Up Retro Arcade Experience in Belfast | Banana Block Belfast </title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+
+
 <script type="text/javascript">
 const bgArray = new Array();
-bgArray[11] = "11";
-bgArray[12] = "12";
-bgArray[13] = "13";
-bgArray[14] = "14";
-bgArray[15] = "15";
-bgArray[16] = "16";
-bgArray[17] = "17";
-bgArray[18] = "18";
-bgArray[19] = "19";
-bgArray[20] = "20";
-bgArray[21] = "21";
+bgArray[0] = "0";
+bgArray[1] = "1";
+bgArray[2] = "2";
+bgArray[3] = "3";
+bgArray[4] = "4";
+bgArray[5] = "5";
+bgArray[6] = "6";
+bgArray[7] = "7";
+bgArray[8] = "8";
+bgArray[9] = "9";
+bgArray[10] = "10";
 
 const url = "https://basearcade.com/";
-let i = 11;
+let i = 0;
 let l = bgArray.length;
 
 function it() {
@@ -62,7 +47,7 @@ function it() {
 		setTimeout(it, 2000);
 	}
 	if (i == l) {
-		i = 11;
+		i = 0;
 	}
 }
 
@@ -123,17 +108,17 @@ body{
 	background-color: black;
 	position: absolute;
 	width: 100vw;
-	height: 90vh;
+	height: 80vh;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 
 .fg {
-	background-color: #360648b0;
+	background-color: rgba(0,0,0,0.6);
 	position: relative;
 	width: 100vw;
-	height: 90vh;
+	height: 80vh;
 }
 	div#header {
 		font-family: "Pixelated MS Sans Serif", Arial;
@@ -154,8 +139,8 @@ body{
 
 	.button{
 
-
-	background: #AF0A0E;
+	
+	background: #CF3E2D;
     border-bottom: 6px inset rgba(0,0,0,.5);
     border-left: 6px inset rgba(0,0,0,.5);
     border-right: 6px inset rgba(255,255,255,.5);
@@ -286,7 +271,7 @@ div#tickets{
 	margin: 15% auto 5% auto;
 	/* 15% from the top and centered */
 
-	max-width: 50%;
+	max-width: 20%;
 	/* Could be more or less, depending on screen size */
 	visibility: hidden;
 	
@@ -361,25 +346,13 @@ input, label{
 	font-family: "Pixelated MS Sans Serif", Arial !important;
 	line-height: 1.3;
 }
-
-
-
-@media screen and (max-width:810px) {
+@media screen and (max-width:600px) {
 
 .modal-content{
 	max-width: 60%;
 }
 
 
-
-}
-
-@media screen and (max-width:600px) {
-
-.modal-content{
-	max-width: 90%;
-	padding: 1.6rem 2rem;
-}
 
 }
 
@@ -830,25 +803,12 @@ footer img{
 
 .two-events{
 	display: block;
-	margin-bottom: 12px;
-	margin-top: 16px;
+	margin-top: 12px;
 	font-size: 12px;
     color: #f2f2f2;
     font-weight: bold;
     font-family: "Pixelated MS Sans Serif", Arial;
 	text-align: center;
-}
-
-/*new stuff */
-
-.shadowfilter {
-	-webkit-filter: drop-shadow(0px 0px 4px rgba(255,255,255,0.80));
-	-webkit-transition: all 0.5s linear;
-	-o-transition: all 0.5s linear;
-	transition: all 0.5s linear;
-	
-}.shadowfilter:hover {
-	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
 }
 </style>
 
@@ -905,7 +865,7 @@ footer img{
 	  </svg>  
 	  </button>
 <div class="bg"></div>
-<div class="fg"><div id="header" class="large"><img class="logo shadowfilter mobile" src="smol-logo.png"/> <img class="logo desktop shadowfilter" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#" id="modal-button" style="display: block;" class="button">Join Mailinglist</a><span class="newsletter two-events">for upcoming tickets</span><span class="newsletter"> — </span><span class="newsletter two-events">February & March sold out! </span> </div></div>
+<div class="fg"><div id="header" class="large"><img class="logo mobile" src="smol-logo.png"/> <img class="logo desktop" src="big-logo.png"><span class="intro">A pop up retro arcade experience in Belfast </span><a href="#tickets" style="display: block;" class="button good">Get Tickets</a><span class="newsletter"><span class="two-events">Next Event: 14-16 Feb <br>on Sale Thu 23 Jan @ 8pm</span></span> </div></div>
 
 <div id="tickets">
 
@@ -916,45 +876,76 @@ footer img{
 	<div id="feb" class="event may second">
 		
 
-		<h3>Fri 14 Mar</h3>
+		<h3>Fri 14 Feb</h3>
+		<h4>NI Science Fest • 7pm-11pm • 18+</h4>
+		
+		<tito-widget
+		event="basearcade/feb-14"
+	  ></tito-widget>
+		
+	</div>	
+
+	<div id="feb" class="event may second">
+		
+
+		<h3>Sat 15 Feb</h3>
+		<h4>NI Science Fest • 11am-11pm • 3 Sessions</h4>
+		
+		<tito-widget
+		event="basearcade/feb-15"
+	  ></tito-widget>
+		
+	</div>	
+
+	<div id="feb" class="event may second">
+		
+
+		<h3>Sun 16 Feb</h3>
+		<h4>NI Science Fest • 11am-3pm • Family friendly</h4>
+		
+		<tito-widget
+		event="basearcade/feb-16"
+	  ></tito-widget>
+		
+	</div>	
+
+	
+
+
+
+	<div id="jan" class="event may second">
+		
+
+		<h3>Fri 17 Jan</h3>
 		<h4>7pm-11pm • 18+</h4>
 		
 		<tito-widget
-		event="basearcade/mar-14"
+		event="basearcade/jan-17"
 	  ></tito-widget>
 		
 	</div>	
 
-	<div id="feb" class="event may second">
-		
+	<div class="event may second">
 
-		<h3>Sat 15 Mar</h3>
-		<h4>11am-7pm • 2 Sessions</h4>
+		<h3>Sat 18 Jan 2025</h3>
+		<h4>11am-11pm • 3 Sessions</h4>
 		
 		<tito-widget
-		event="basearcade/mar-15"
+		event="basearcade/jan-18"
 	  ></tito-widget>
 		
 	</div>	
 
-	<div id="feb" class="event may second">
-		
+	<div class="event may second">
 
-		<h3>Sun 16 Mar</h3>
-		<h4>11am-7pm • 2 Sessions</h4>
+		<h3>Sun 19 Jan 2025</h3>
+		<h4>11am-3pm • Family friendly</h4>
 		
 		<tito-widget
-		event="basearcade/mar-16"
+		event="basearcade/jan-19"
 	  ></tito-widget>
 		
 	</div>	
-
-	
-
-
-
-	
-
 	
 	
 	
@@ -997,7 +988,7 @@ footer img{
 		<h5>Kids allowed?</h5>
 		<p>Usually, the early sessions of each day will be family friendly. The later ones will be adult only. Bar still open for adults during the first session.</p>
 
-		<p>Kids are 15 and under. They must be accompanied by an adult with a paid ticket.</p>
+		<p>Kids are under 15. They must be accompanied by an adult with a paid ticket.</p>
 
 		<h5>Do you have food?</h5>
 		<p>There's food options on site! We'll be right amongst <a href="https://www.instagram.com/flout.pizza/?hl=en"> genuinely world class pizza</a>, <a href="https://www.instagram.com/boundarybrewing/">beer</a>, <a href="https://www.bodegabagels.co.uk/bananablock">bagels</a> and <a href="https://www.instagram.com/_hiburger/?hl=en">burgers</a>.</p>
@@ -1015,14 +1006,14 @@ footer img{
 		<p>Banana Block is a short Glider (G1) route from the city centre. Get off at Connswater and walk about 90 seconds round the corner to the venue. There's free parking nearby too! </p>
 
 		<h5>Do you take corporate or private hire bookings?</h5>
-		<p>Sometimes! Fill in <a href="../hire/">this wee form</a> and we'll talk.</p>
+		<p>Sometimes! Fill in <a href="/hire/">this wee form</a> and we'll talk.</p>
 
 		<h5>Can I cancel my tickets or come another time?</h5>
 		<p>Being a pop up, it's sometimes hard for us to know when our next event will be — so it's hard to transfer tickets to future events. With that in mind, all ticket sales are final. Please try your best to make it when you get tickets, or transfer them to a friend. They'll love it.</p>
 
 		<h5>How can I stay up to date with all things Base Arcade?</h5>
 		<p>We thought you'd never ask.</p>
-		<p>You can find us in all the usual spots, but we're probably most active at sharing behind the scenes stuff on <a href="https://www.instagram.com/basearcade_/">Instagram</a>. We share stuff to <a href="https://tr.ee/YP2d39-l0h">TikTok</a>, <a href="https://www.facebook.com/basearcade">Facebook</a>, <a href="https://twitter.com/BaseArcade">Twitter</a> and all too. And in the spirit of retro, there's also an internet <a href="/mailinglist/">mailing list</a>. </p>
+		<p>You can find us in all the usual spots, but we're probably most active at sharing behind the scenes stuff on <a href="https://www.instagram.com/basearcade_/">Instagram</a>. We share stuff to <a href="https://tr.ee/YP2d39-l0h">TikTok</a>, <a href="https://www.facebook.com/basearcade">Facebook</a>, <a href="https://twitter.com/BaseArcade">Twitter</a> and all too. And in the spirit of retro, there's also an internet <a href="/newsletter/">newsletter</a>. </p>
 		<h5>Will you ever open this permanently?</h5>
 		<p>Never say never...</p>
 		
@@ -1053,7 +1044,7 @@ footer img{
 			
 		
 			
-			<p>Find out when March tickets go on sale first in our mailing list</p>
+			<p>Get a reminder when tickets go on sale in our newsletter  </p>
 		</div>
 		<div class="modal-body">
 
@@ -1087,7 +1078,7 @@ footer img{
             <li><a href="/hire/">Hire</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/follow/">Follow us</a></li>
-            <li><a href="/mailinglist/">Mailing List</a></li>
+            <li><a href="/newsletter/">Newsletter</a></li>
         </ul>
     </nav>
 </div>
@@ -1191,57 +1182,29 @@ window.onclick = function(event) {
 }
 
 </script>
+
 <script>
 
-	document.addEventListener("DOMContentLoaded", function () {
-		function replaceText() {
-			document.querySelectorAll(".tito-release--status").forEach(el => {
-				// Check if the first child is a text node and contains "Upcoming"
-				if (el.firstChild && el.firstChild.nodeType === Node.TEXT_NODE) {
-					el.firstChild.textContent = el.firstChild.textContent.replace("Upcoming", "On sale").trim();
-				}
-			});
-		}
-	
-		// Run immediately in case elements are already loaded
-		replaceText();
-	
-		// Observe changes to catch dynamically loaded content
-		const observer = new MutationObserver(replaceText);
-		observer.observe(document.body, { childList: true, subtree: true });
-	});
-	
-	
-	</script>
+document.addEventListener("DOMContentLoaded", function () {
+    function replaceText() {
+        document.querySelectorAll(".tito-release--status").forEach(el => {
+            // Check if the first child is a text node and contains "Upcoming"
+            if (el.firstChild && el.firstChild.nodeType === Node.TEXT_NODE) {
+                el.firstChild.textContent = el.firstChild.textContent.replace("Upcoming", "On sale").trim();
+            }
+        });
+    }
 
+    // Run immediately in case elements are already loaded
+    replaceText();
+
+    // Observe changes to catch dynamically loaded content
+    const observer = new MutationObserver(replaceText);
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+
+
+</script>
 </div><!--main site-->
-
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-	  const konamiCode = [
-		"ArrowUp",
-		"ArrowUp",
-		"ArrowDown",
-		"ArrowDown",
-		"ArrowLeft",
-		"ArrowRight",
-		"ArrowLeft",
-		"ArrowRight",
-		"b",
-		"a"
-	  ];
-	  
-	  let inputSequence = [];
-  
-	  document.addEventListener("keydown", function (event) {
-		inputSequence.push(event.key);
-		inputSequence = inputSequence.slice(-konamiCode.length); // Keep only last 10 keys
-  
-		if (inputSequence.join("") === konamiCode.join("")) {
-		  window.location.href = "/level99"; // Change this to your target page
-		}
-	  });
-	});
-  </script>
 </body>
 </html>
