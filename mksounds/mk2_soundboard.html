@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat II Soundboard</title>
+    <style>
+        @font-face {
+            font-family: 'MortalKombat2';
+            src: url('mortalkombat2.ttf') format('truetype');
+        }
+        body {
+            font-family: 'MortalKombat2', Arial, sans-serif;
+            text-align: center;
+            background-color: red;
+            color: white;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .button {
+            padding: 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            font-family: 'MortalKombat2', Arial, sans-serif;
+        }
+        .button:nth-child(1) { background: black; }
+        .button:nth-child(2) { background: darkblue; }
+        .button:nth-child(3) { background: darkgreen; }
+        .button:nth-child(4) { background: darkpurple; }
+        .button:nth-child(5) { background: darkorange; }
+        .button:nth-child(6) { background: darkbrown; }
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mortal Kombat II Soundboard</h1>
+    <div class="grid" id="soundboard"></div>
+
+    <script>
+        const sounds = [
+            { name: "Fight!", file: "fight.mp3" },
+            { name: "Finish Him!", file: "finishhim.mp3" },
+            { name: "Fatality", file: "fatality.mp3" },
+            { name: "Flawless Victory", file: "flawless.mp3" },
+            { name: "Get Over Here!", file: "getoverhere.mp3" },
+            { name: "Toasty!", file: "toasty.mp3" }
+        ];
+
+        const soundboard = document.getElementById("soundboard");
+
+        sounds.forEach(sound => {
+            const button = document.createElement("button");
+            button.classList.add("button");
+            button.textContent = sound.name;
+            button.onclick = () => {
+                const audio = new Audio(sound.file);
+                audio.play();
+            };
+            soundboard.appendChild(button);
+        });
+    </script>
+</body>
+</html>
