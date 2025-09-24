@@ -907,11 +907,11 @@ footer img{
 <div class="bg"></div>
 <div class="fg">
 	<div id="header" class="large">
-		<img class="logo shadowfilter mobile" src="smol-logo.png"/> 
-		<img class="logo desktop shadowfilter" src="big-logo.png">
+		<img class="logo shadowfilter mobile" src="../smol-logo.png"/> 
+		<img class="logo desktop shadowfilter" src="../big-logo.png">
 		<span class="intro">A pop up retro arcade experience in Belfast </span>
-		<a href="#tickets" id="modal-button" style="display: block;" class="button">Join Mailing list</a>
-		<span class="newsletter two-events">for October Pre-sale</span>
+		<a href="#tickets" style="display: block;" class="button">Get tickets</a>
+		<span class="newsletter two-events">Pre Sale live from 8pm</span>
   
 	
 	</div>
@@ -923,10 +923,9 @@ footer img{
 		<h3>Fri 17 Oct</h3>
 		<h4>7pm-11pm • 18+ </h4>
 		
-	<div class="next-event">
-		Pre Sale Wed @ 8pm <br>
-		General Sale Thur @ 8pm
-	</div>
+	<tito-widget
+		event="basearcade/oct-17"
+	  ></tito-widget>
 		
 	</div>	
 
@@ -934,20 +933,25 @@ footer img{
 		<h3>Sat 18 Oct</h3>
 		<h4>3 Sessions • 10am-10pm</h4>
 	
-	<div class="next-event">
-		Pre Sale Wed @ 8pm <br>
-		General Sale Thur @ 8pm
-	</div>
+		
+		<tito-widget
+		event="basearcade/oct-18"
+	  ></tito-widget>
+	</div>	
+
+	<div id="oct" class="event may second">
+		<h3>Sat 18 Oct</h3>
+		<h4>🧟‍♂️ Evil Dead II Screening 🎟️ • 10pm • 18+</h4>
+		<div class="next-event">On sale soon via <a href="https://www.ormeaucommunitycinema.com/">Ormeau Community Cinema</a></div>
 	</div>	
 
 	<div id="October" class="event may second">
 		<h3>Sun 19 Oct</h3>
 		<h4>11am-3pm • Family Friendly </h4>
 		
-		<div class="next-event">
-		Pre Sale Wed @ 8pm <br>
-		General Sale Thur @ 8pm
-	</div>
+		<tito-widget
+		event="basearcade/oct-19"
+	  ></tito-widget>
 		
 	</div>	
 
@@ -1018,7 +1022,7 @@ footer img{
 <footer>
 	
 	  
-	<span><img src="base-logo-site-footer.png"></span>
+	<span><img src="../base-logo-site-footer.png"></span>
 
 	<ul>
 	  <li><a href="/terms/">Terms</a></li>
