@@ -13,12 +13,12 @@
   gtag('config', 'G-JN1W14YVXT');
 </script>
 <meta name="viewport" content="width=device-width" />
-<meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade & Pinball Experience in Belfast" />
-<meta property="og:description" content="Next event: 19-21 September at Banana Block" />
+<meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
+<meta property="og:description" content="13 & 14 December at Banana Block" />
 <meta property="og:image" content="https://basearcade.com/og.png" />
 <meta property="og:url" content="https://basearcade.com" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-<title>Base Arcade | Pinball in Belfast | A Pop Up Retro Arcade & Pinball Experience in Belfast | Banana Block Belfast </title>
+<title>Base Arcade | A Pop Up Retro Arcade Experience in Belfast | Banana Block Belfast </title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -36,8 +36,39 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff">	
+<script type="text/javascript">
+const bgArray = new Array();
+bgArray[11] = "11";
+bgArray[12] = "12";
+bgArray[13] = "13";
+bgArray[14] = "14";
+bgArray[15] = "15";
+bgArray[16] = "16";
+bgArray[17] = "17";
+bgArray[18] = "18";
+bgArray[19] = "19";
+bgArray[20] = "20";
+bgArray[21] = "21";
 
+const url = "https://basearcade.com/";
+let i = 11;
+let l = bgArray.length;
+
+function it() {
+	$(".bg").css("background-image", "url(" + url + bgArray[i] + ".gif)");
+
+	if (++i <= l) {
+		setTimeout(it, 2000);
+	}
+	if (i == l) {
+		i = 11;
+	}
+}
+
+it();
+
+	</script>
 
 
 <style>
@@ -100,8 +131,6 @@ body{
 
 .fg {
 	background-color: #360648b0;
-	background-image: url(../pins-bg.jpg);
-	background-size: cover;
 	position: relative;
 	width: 100vw;
 	height: 90vh;
@@ -878,17 +907,18 @@ footer img{
 <div class="bg"></div>
 <div class="fg">
 	<div id="header" class="large">
-		<img class="logo shadowfilter mobile" src="../shadow-logo.png"/> 
+		<img class="logo shadowfilter mobile" src="../smol-logo.png"/> 
 		<img class="logo desktop shadowfilter" src="../big-logo.png">
-		<span class="intro">So you like pinball? Well come to one of our events!</span>
-		<a href="#tickets"  style="display: block;" class="button">Get Tickets</a>
-		<span class="newsletter two-events">4 hours of free play pinball </span>
-
+		<span class="intro">A pop up retro arcade & pinball experience in Belfast </span>
+		<a href="#tickets" style="display: block;" id="modal-button" class="button">Get tickets</a>
+		<span class="newsletter two-events">Pre-Sale ON NOW</span>
+  
 	
 	</div>
 </div>
 
 <div id="tickets">
+
 
 	<div id="dec" class="event may second">
 		<h3>Sat 13 Dec</h3>
@@ -912,6 +942,8 @@ footer img{
 		
 	</div>
 
+
+		
 	
 
 </div>
@@ -922,20 +954,20 @@ footer img{
 
 		<div class="kicker">
 
-			<p>Get ready to enjoy Belfast's original free play arcade experience! We'll have a great selection of classic games from the 70s, 80s & 90s, pinball machines and a retro console corner. There's also a full bar — and our early sessions are always family friendly. </p>
+			<p>Get ready to enjoy Belfast's original free play arcade experience! We've been running events for over 2.5 years and have built an extensive selection of classic games from the 70s, 80s & 90s including pinball machines and a retro console area. There's also a full bar of course — and our early sessions are always family friendly. With quality food available on site, you'll be well looked after at Base Arcade. </p>
 		</div>
 
 		<iframe class="youtube-video"  src="https://www.youtube.com/embed/avFaPCUB6Yc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 		<h5>Where is it?</h5>
-		<p>We'll be in the incredible 🍌 Banana Block at Portview Trade Centre. Poppin up for one full weekend roughly once a month but who knows where we might end up in future...</p>
+		<p>In the incredible 🍌 Banana Block at Portview Trade Centre. Popping up for one full weekend roughly once a month - but who knows where we might end up in future...</p>
 
 		
 		<h5>Why sessions?</h5>
-		<p>We're running sessions so we can ensure an enjoyable experience for everyone. We want to make sure you get plenty of game time on the machines of your choice. A form of crowd/quality control, basically.</p>
+		<p>We're running 4 hour sessions so we can ensure an enjoyable experience for everyone. We want to make sure you get plenty of game time on the machines of your choice. A form of crowd/quality control, basically.</p>
 
 		<h5>How much is it?</h5>
-		<p>£20 for adults, £8 for kids 15 and under. Once you have a pass, all machines are set to freeplay.  </p>
+		<p>£20 for adults, £8 for kids 15 and under. Once you have a pass, all machines are set to freeplay for 4 hours.  </p>
 
 		<h5>What does free play mean?</h5>
 		<p>Free play means that once you have a pass, all machines, pinball and consoles are free to play. Base Arcade is a coin and token free zone.</p>
@@ -944,7 +976,7 @@ footer img{
 		<p>For now, no. We'll be running full weekend pop ups roughly once a month though. Event dates will always be published on this website. </p>
 
 		<h5>Will there be a bar?</h5>
-		<p>Yes! There's a fully stocked bar with a selection of craft beers, regular beers and more. Last orders 11pm.</p>
+		<p>Yes! Of course! There's a fully stocked bar with a selection of craft beers, regular beers and more. Last orders 11pm.</p>
 
 		<h5>Kids allowed?</h5>
 		<p>Usually, the early sessions of each day will be family friendly. The later ones will be adult only. Bar still open for adults during the first session.</p>
@@ -952,7 +984,7 @@ footer img{
 		<p>Kids are 15 and under. They must be accompanied by an adult with a paid ticket.</p>
 
 		<h5>Do you have food?</h5>
-		<p>There's food options on site! We'll be right amongst <a href="https://www.instagram.com/flout.pizza/?hl=en"> genuinely world class pizza</a>, <a href="https://www.instagram.com/boundarybrewing/">beer</a>, <a href="https://www.bodegabagels.co.uk/bananablock">bagels</a> and <a href="https://www.instagram.com/_hiburger/?hl=en">burgers</a>.</p>
+		<p>There's amazing food options on site! We'll be right amongst <a href="https://www.instagram.com/flout.pizza/?hl=en"> genuinely world class pizza</a>, <a href="https://www.instagram.com/boundarybrewing/">beer</a>, <a href="https://www.bodegabagels.co.uk/bananablock">bagels</a> and <a href="https://www.instagram.com/_hiburger/?hl=en">burgers</a>.</p>
 
 		<h5>Do I have to arrive on time for a session?</h5>
 		<p>It's better for you if you do! But you can arrive any time within your session and if you want to leave, we'll have a wristband system so you can come and go as you please.</p>
@@ -1003,7 +1035,7 @@ footer img{
 			
 		
 			
-			<p>Get early access to September tickets by joining our mailing list</p>
+			<p>Get early access to December tickets by joining our mailing list</p>
 		</div>
 		<div class="modal-body">
 
