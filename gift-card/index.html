@@ -962,6 +962,41 @@ $('#toggle').click(function() {
 
 
 
+<!-- Override "Ticket" -> "Gift Card" -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var attempts = 0;
+    var maxAttempts = 50; // 50 * 200ms = 10 seconds max
+
+    var timer = setInterval(function () {
+      attempts++;
+
+      // Grab all matching elements Tito has rendered so far
+      var els = document.querySelectorAll('.tito-registration-summary-lines--description');
+
+      if (els.length) {
+        els.forEach(function (el) {
+          var text = el.textContent;
+
+          // Basic replacements – keep it simple
+          text = text.replace(/\b1\s*Ticket\b/i, '1 Gift Card');
+          text = text.replace(/\bTickets\b/i, 'Gift Cards');
+          text = text.replace(/\bTicket\b/i, 'Gift Card');
+
+          el.textContent = text;
+        });
+
+        // Once we've done the replacement at least once, stop polling
+        clearInterval(timer);
+      }
+
+      // Safety: stop trying after maxAttempts to avoid running forever
+      if (attempts >= maxAttempts) {
+        clearInterval(timer);
+      }
+    }, 200); // check every 200ms
+  });
+</script>
 
 </body>
 </html>
