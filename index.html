@@ -76,6 +76,7 @@ it();
 body{
 	width: 100vw;
     height: 100vh;
+	padding-top: 30px; /* Space for fixed marquee banner */
 }
 
 #main-site {
@@ -173,6 +174,16 @@ body{
 	font-family: "Pixelated MS Sans Serif", Arial;
 	max-width: 480px;
 	margin: 0 auto;
+	text-decoration: none;
+}
+
+.button-gift-card {
+	background: #228B22;
+	font-size: 0.75rem;
+	min-width: 160px;
+	padding: 0.4rem 0.8rem;
+	margin-top: 0.5rem;
+	letter-spacing: 0.1em;
 }
 
 .good{
@@ -850,6 +861,45 @@ footer img{
 }.shadowfilter:hover {
 	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
 }
+
+/* Retro Marquee Banner */
+.announcement-marquee {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #AF0A0E;
+	color: #e8e8e8;
+	font-family: "Pixelated MS Sans Serif", Arial !important;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 8px 0;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 1000;
+	border-bottom: 2px solid rgba(0,0,0,.3);
+	line-height: 1.2;
+}
+
+.announcement-marquee-content {
+	display: inline-block;
+	padding-left: 100%;
+	animation: scroll-marquee 30s linear infinite;
+	font-family: "Pixelated MS Sans Serif", Arial !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	color: #e8e8e8 !important;
+	text-transform: uppercase !important;
+}
+
+@keyframes scroll-marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -859,6 +909,12 @@ footer img{
 </head>
 
 <body>
+
+	<div class="announcement-marquee">
+		<div class="announcement-marquee-content">
+			next event 16-18 Jan • pre sale starts 8pm wednesday • next event 16-18 Jan. pre sale starts 8pm wednesday • next event 16-18 Jan. pre sale starts 8pm wednesday • next event 16-18 Jan. pre sale starts 8pm wednesday 
+		</div>
+	</div>
 
 	<div id="main-site">
 
@@ -912,7 +968,7 @@ footer img{
 		<span class="intro">A pop up retro arcade & pinball experience in Belfast </span>
 		<a href="#" style="display: block;" id="modal-button" class="button">Join Mailinglist</a>
 		<span class="newsletter two-events">For Pre-sale access</span><br>
-		<a href="/gift-card/"><span class="newsletter two-events"> 🎄 Gift Cards this way →</span></a>
+		<a href="/gift-card/" class="button button-gift-card">Gift Cards →</a>
   
 	
 	</div>
