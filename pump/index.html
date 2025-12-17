@@ -14,7 +14,7 @@
 </script>
 <meta name="viewport" content="width=device-width" />
 <meta property="og:title" content="Base Arcade | A Pop Up Retro Arcade Experience in Belfast" />
-<meta property="og:description" content="13 & 14 December at Banana Block" />
+<meta property="og:description" content="16-18 January at Banana Block" />
 <meta property="og:image" content="https://basearcade.com/og.png" />
 <meta property="og:url" content="https://basearcade.com" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -76,6 +76,7 @@ it();
 body{
 	width: 100vw;
     height: 100vh;
+	padding-top: 30px; /* Space for fixed marquee banner */
 }
 
 #main-site {
@@ -173,6 +174,16 @@ body{
 	font-family: "Pixelated MS Sans Serif", Arial;
 	max-width: 480px;
 	margin: 0 auto;
+	text-decoration: none;
+}
+
+.button-gift-card {
+	background: #228B22;
+	font-size: 0.75rem;
+	min-width: 160px;
+	padding: 0.4rem 0.8rem;
+	margin-top: 2.5rem;
+	letter-spacing: 0.1em;
 }
 
 .good{
@@ -830,7 +841,7 @@ footer img{
 
 .two-events{
 	display: block;
-	margin-bottom: 12px;
+	margin-bottom: 6px;
 	margin-top: 16px;
 	font-size: 12px;
     color: #f2f2f2;
@@ -850,6 +861,45 @@ footer img{
 }.shadowfilter:hover {
 	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
 }
+
+/* Retro Marquee Banner */
+.announcement-marquee {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #AF0A0E;
+	color: #e8e8e8;
+	font-family: "Pixelated MS Sans Serif", Arial !important;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 8px 0;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 1000;
+	border-bottom: 2px solid rgba(0,0,0,.3);
+	line-height: 1.2;
+}
+
+.announcement-marquee-content {
+	display: inline-block;
+	padding-left: 100%;
+	animation: scroll-marquee 30s linear infinite;
+	font-family: "Pixelated MS Sans Serif", Arial !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	color: #e8e8e8 !important;
+	text-transform: uppercase !important;
+}
+
+@keyframes scroll-marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -859,6 +909,12 @@ footer img{
 </head>
 
 <body>
+
+	<div class="announcement-marquee">
+		<div class="announcement-marquee-content">
+			🎄 Merry Christmas ya filthy animals • next event 16-18 Jan • pre sale starts 8pm wednesday 🎄 Merry Christmas ya filthy animals • next event 16-18 Jan. pre sale starts 8pm wednesday 🎄 Merry Christmas ya filthy animals • next event 16-18 Jan. pre sale starts 8pm wednesday 🎄 Merry Christmas ya filthy animals •  next event 16-18 Jan. pre sale starts 8pm wednesday 
+		</div>
+	</div>
 
 	<div id="main-site">
 
@@ -910,8 +966,9 @@ footer img{
 		<img class="logo shadowfilter mobile" src="../smol-logo.png"/> 
 		<img class="logo desktop shadowfilter" src="../big-logo.png">
 		<span class="intro">A pop up retro arcade & pinball experience in Belfast </span>
-		<a href="#tickets" style="display: block;" class="button">Get tickets</a>
-		<span class="newsletter two-events">Pre-Sale ON NOW</span>
+		<a href="#tickets" style="display: block;" class="button">Get Tickets</a>
+		<span class="newsletter two-events">Pre-sale live now</span>
+		<a href="/gift-card/" class="button button-gift-card">Xmas Gift Cards</a>
   
 	
 	</div>
@@ -920,25 +977,35 @@ footer img{
 <div id="tickets">
 
 
-	<div id="dec" class="event may second">
-		<h3>Sat 13 Dec</h3>
-		<h4>🍌 Banana Block • 3 Sessions • 11am-11pm</h4>
-	
-		<tito-widget
-		event="basearcade/dec-13-25" 
+	<div id="jan" class="event may second">
+		<h3>Fri 16 Jan</h3>
+		<h4>🍌 Banana Block • 7pm-11pm</h4>
+		
+	<tito-widget
+		event="basearcade/jan-16-26" 
 	  	></tito-widget>
+
 	</div>
 
+	<div id="jan" class="event may second">
+		<h3>Sat 17 Jan</h3>
+		<h4>🍌 Banana Block • 3 sessions • 11am-11pm</h4>
+	
+		
+	<tito-widget
+		event="basearcade/jan-17-26" 
+	  	></tito-widget>
+		
+	</div>
 
-
-	<div id="dec" class="event may second">
-		<h3>Sun 14 Dec</h3>
+		<div id="jan" class="event may second">
+		<h3>Sun 18 Jan</h3>
 		<h4>🍌 Banana Block • 11am-3pm • Family Friendly</h4>
 	
 		
-		<tito-widget
-		event="basearcade/dec-14-25" 
-		></tito-widget>
+	<tito-widget
+		event="basearcade/jan-18-26" 
+	  	></tito-widget>
 		
 	</div>
 
@@ -1035,7 +1102,7 @@ footer img{
 			
 		
 			
-			<p>Get early access to December tickets by joining our mailing list</p>
+			<p>Get early access to January tickets by joining our mailing list</p>
 		</div>
 		<div class="modal-body">
 
@@ -1066,6 +1133,7 @@ footer img{
     <nav class="overlay-menu">
         <ul>
             <li><a href="/">Tickets</a></li>
+			<li><a href="/gift-card/">Gift Cards 🎄</a></li>
             <li><a href="/hire/">Hire</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/follow/">Follow us</a></li>
