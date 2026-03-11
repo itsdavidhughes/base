@@ -1268,6 +1268,48 @@ window.onclick = function(event) {
 	
 	</script>
 
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const relabelTitoDiscountField = () => {
+    const input = document.querySelector(".tito-discount-code-field");
+    if (!input) return false;
+
+    let label = null;
+
+    if (input.id) {
+      label = document.querySelector(`label[for="${input.id}"]`);
+    }
+
+    if (!label) {
+      label = input.closest("div")?.querySelector("label");
+    }
+
+    if (!label) return false;
+
+    if (label.textContent.trim() !== "Gift card code") {
+      label.textContent = "Gift card code";
+    }
+
+    return true;
+  };
+
+  if (relabelTitoDiscountField()) return;
+
+  const observer = new MutationObserver(() => {
+    if (relabelTitoDiscountField()) {
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  setTimeout(() => observer.disconnect(), 10000);
+});
+</script>
+
 </div><!--main site-->
 
 <script>
@@ -1297,5 +1339,7 @@ window.onclick = function(event) {
 	  });
 	});
   </script>
+
+  
 </body>
 </html>
