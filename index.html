@@ -862,6 +862,97 @@ footer img{
 	-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
 }
 
+/* Hero screening link (subtle) */
+.screening-link {
+	display: inline-block;
+	margin-top: 1.25rem;
+	padding: 6px 14px;
+	font-family: "Pixelated MS Sans Serif", Arial;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	color: #ffde5a;
+	text-decoration: none;
+	border: 1px dashed rgba(255, 222, 90, 0.6);
+	border-radius: 2px;
+	background: rgba(0, 0, 0, 0.35);
+	transition: all 0.2s ease;
+}
+
+.screening-link:hover {
+	color: #fff;
+	border-color: #ffde5a;
+	background: rgba(255, 222, 90, 0.15);
+}
+
+@media screen and (max-width:600px) {
+	.screening-link {
+		font-size: 11px;
+		padding: 5px 10px;
+	}
+}
+
+/* Screening callout (Saturday) */
+.screening-callout {
+	background: #1a0a26;
+	border: 2px solid #ffde5a;
+	border-radius: 4px;
+	padding: 1.25rem 1.5rem;
+	margin: 1rem 0 2rem;
+	color: #fff;
+	box-shadow: 0 0 0 4px #1a0a26, 0 0 0 6px rgba(255, 222, 90, 0.25);
+}
+
+.screening-callout .screening-tag {
+	display: inline-block;
+	background: #AF0A0E;
+	color: #fff;
+	font-family: "Pixelated MS Sans Serif", Arial;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 4px 10px;
+	margin-bottom: 0.75rem;
+}
+
+.screening-callout .screening-title {
+	font-family: "Pixelated MS Sans Serif", Arial;
+	font-size: 16px;
+	color: #ffde5a !important;
+	text-align: left !important;
+	text-transform: none;
+	letter-spacing: 0;
+	margin-bottom: 0.5rem;
+	line-height: 1.3;
+}
+
+.screening-callout .screening-blurb {
+	font-size: 14px;
+	color: #e8e8e8;
+	margin-bottom: 1rem;
+	line-height: 1.5;
+}
+
+.screening-callout .screening-blurb a {
+	color: #ffde5a;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.screening-callout .tito-widget {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+@media screen and (max-width:600px) {
+	.screening-callout {
+		padding: 1rem;
+	}
+	.screening-callout .screening-title {
+		font-size: 15px;
+	}
+}
+
 /* Retro Marquee Banner */
 .announcement-marquee {
 	position: fixed;
@@ -968,6 +1059,7 @@ footer img{
 		<span class="intro">A freeplay retro arcade & pinball experience in Belfast </span>
 		<a href="#tickets" style="display: block;" class="button">Get Tickets</a>
 		<span class="newsletter two-events">On sale now</span>
+		<a href="/walter-day-screening/" class="screening-link">🎬 Plus a free Walter Day screening · Sat 9 May →</a>
 	
   
 	
@@ -991,11 +1083,19 @@ footer img{
 	<div id="jan" class="event may second">
 		<h3>Sat 9 May </h3>
 		<h4>🍌 Banana Block • 3 sessions • 11am-11pm</h4>
-	
+
+		<div class="screening-callout">
+			<span class="screening-tag">🎬 Free Screening · 5:30–7pm</span>
+			<h4 class="screening-title">Arcades &amp; Love Songs: The Ballad of Walter Day</h4>
+			<p class="screening-blurb">European Premiere from the makers of <em>King of Kong</em>, plus a live Q&amp;A with Walter Day. Free entry — book a ticket below. <a href="/walter-day-screening/">More info →</a></p>
+
+			<tito-widget event="basearcade/arcades-love-songs-screening"></tito-widget>
+		</div>
+
 	<tito-widget
-		event="basearcade/may-9" 
+		event="basearcade/may-9"
 	  	></tito-widget>
-		
+
 	</div>
 
 	<div id="jan" class="event may second">
