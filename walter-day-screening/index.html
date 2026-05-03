@@ -56,6 +56,44 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("twin-galaxies.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px) saturate(1.1);
+  transform: scale(1.1);
+  opacity: 0.65;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(3,7,6,0.15) 0%, rgba(3,7,6,0.55) 70%, rgba(3,7,6,0.85) 100%),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0px,
+      rgba(0,0,0,0) 2px,
+      rgba(0,0,0,0.18) 3px,
+      rgba(0,0,0,0) 4px
+    );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .wrap {
@@ -67,6 +105,26 @@ body {
 header {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+header .brand {
+  display: block;
+  width: 80px;
+  max-width: 22vw;
+  margin: 0 auto 0.4rem;
+  opacity: 0.85;
+  transform: rotate(-6deg);
+  transform-origin: center center;
+}
+
+header .presents {
+  display: block;
+  font-family: "Pixelated MS Sans Serif", Arial;
+  font-size: 0.7rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: 1.75rem;
 }
 
 header h1 {
@@ -225,6 +283,8 @@ footer img {
 <div class="wrap">
 
   <header>
+    <a href="/" aria-label="Base Arcade"><img class="brand" src="/shadow-logo.png" alt="Base Arcade" /></a>
+    <span class="presents">Presents</span>
     <h1>Arcades & Love Songs</h1>
     <h2>The Ballad of Walter Day <br> From the makers of King of Kong</h2>
     <p class="when">Sat 9 May · 5:30–7pm · 🍌 Banana Block</p>
